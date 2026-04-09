@@ -47,7 +47,7 @@ Minimal Viable Outcome:
   2. Set up pygame and initialize pygame run.
   3. Set up a player model
   4. Have left and right movement of the player.
-  5. Set up the read.me and requirements.txt files to update weekly.
+  5. Set up the read.md and requirements.txt files to update weekly.
 
 - Week 2
   1. Create a Ball.
@@ -55,14 +55,14 @@ Minimal Viable Outcome:
   3. Get the ball to bounce between blocks, walls, and player
   4. Create blocks.
   5. Give collision to blocks and destroy them when hit by ball.
-  6. Update anything to the read.me and requirements.txt files.
+  6. Update anything to the read.md and requirements.txt files.
 
 - Week 3
   1. Gain points when destroying the ball
   2. Set up death if the ball goes out of bounds under the player.
   3. Make a color switch of the ball whenever the ball hits the player.
   4. Make players switch their colors input.
-  5. Update anything to the read.me and requirements.txt files.
+  5. Update anything to the read.md and requirements.txt files.
 
 - Week 4
   1. Have a way for the ball and the player must match colors to be hit, and if not, it leads to death.
@@ -71,10 +71,10 @@ Minimal Viable Outcome:
   4. When restarting, resets the scoreboard and the blocks.
   5. Pause menu
   6. Add antyhing else such as details.
-  7. Update anything to the read.me and requirements.txt files.
+  7. Update anything to the read.md and requirements.txt files.
 
 - Week 5 (Final)
   1. Fix/Clean code
   2. Record demo
-  3. Finish writing the Read.me
+  3. Finish writing the Read.md
   4. Put any lasting imports used in the requirements.txt file
