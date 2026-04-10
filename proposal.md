@@ -48,6 +48,7 @@ Minimal Viable Outcome:
   3. Set up a player model
   4. Have left and right movement of the player.
   5. Set up the read.md and requirements.txt files to update weekly.
+  6. Have player be able to resize their screen.
 
 - Week 2
   1. Create a Ball.
