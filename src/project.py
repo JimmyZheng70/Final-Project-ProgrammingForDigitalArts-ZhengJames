@@ -1,4 +1,5 @@
 import pygame
+# TODO: Create a player rectangle at the bottom, allow player to control that rectangle, finish the resizability of the game, and anything else this week.
 
 def main():
     pygame.init()
