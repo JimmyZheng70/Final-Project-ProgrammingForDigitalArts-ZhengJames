@@ -6,7 +6,7 @@ def main():
 
     smallscreen = (800, 600)
     fullscreen = (1920, 1080)
-    screen = pygame.display.set_mode()
+    screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE)
     pygame.quit()
 
 if __name__ == "__main__":
