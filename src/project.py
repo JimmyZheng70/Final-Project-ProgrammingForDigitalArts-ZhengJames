@@ -14,6 +14,7 @@ class Player():
     def movement(self):
         self.direction = 0
         key = pygame.key.get_pressed()
+        if key == pygame.K_a:
         
 
 def main():
