@@ -1,5 +1,5 @@
 import pygame
-# TODO: Create a player rectangle at the bottom, allow player to control that rectangle, finish the resizability of the game, and anything else this week.
+# TODO: 
 
 class Player():
     def __init__(self, screen, color=(0, 0, 255)):
