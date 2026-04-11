@@ -26,8 +26,8 @@ class Player():
         # Stop player from going out of bounds
         if self.shape.left < 0:
             self.shape.left = 0
-        if self.shape.right < 0:
-            self.shape.right = 0
+        if self.shape.right < self.screen.get_width():
+            self.shape.right = self.screen.get_width()
     
     def draw(self):
         pygame.draw.rect(self.screen, self.color, self.shape)
