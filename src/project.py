@@ -54,7 +54,7 @@ def main():
                 screen = pygame.display.set_mode(fullscreen, pygame.RESIZABLE)
             elif event.type == pygame.VIDEORESIZE and is_fullscreen == False:
                 is_fullscreen = False
-                screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE)
+                screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE) # Fix later
         
         player.movement()
         player.draw()
