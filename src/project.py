@@ -17,7 +17,9 @@ class Player():
         if key(pygame.K_LEFT):
             self.shape.x -= self.speed
             self.direction = -1
-        
+        elif key(pygame.K_RIGHT):
+            self.shape.x += self.speed
+            self.direction = 1
         
 
 def main():
