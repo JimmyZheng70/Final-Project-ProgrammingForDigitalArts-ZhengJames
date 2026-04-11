@@ -36,6 +36,16 @@ class Player():
 
 class Ball():
     def __init__(self):
+        # Shape and Size of the ball
+        # Speed movement
+        # Direction, will change each bounce
+        # color, will need to switch it as well.
+        pass
+
+    def movement(self):
+        pass
+
+    def bounce(self):
         pass
 
 def main():
