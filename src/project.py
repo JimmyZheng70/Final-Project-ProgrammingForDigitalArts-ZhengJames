@@ -6,7 +6,7 @@ class Player():
         self.height = 10
         self.width = 100
         self.x = 300
-        self.y = screen.get_height() - 30
+        self.y = screen.get_height() - 40
         self.shape = pygame.Rect(self.x, self.y, self.width, self.height)
         self.speed = 10
         self.direction = 0
@@ -28,6 +28,8 @@ class Player():
             self.shape.left = 0
         if self.shape.right > self.screen.get_width():
             self.shape.right = self.screen.get_width()
+
+        self.shape.y = self.screen.get_height() - 40
     
     def draw(self):
         pygame.draw.rect(self.screen, self.color, self.shape)
