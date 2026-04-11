@@ -3,11 +3,14 @@ import pygame
 
 class Player():
     def __init__(self):
-        # Height & Width of the player
-        # x/y starting position
         # Create shape into a rectangle of player
         # Speed
         # direction
+        self.height = 5
+        self.width = 20
+        self.x = 5
+        self.y = 5
+        
 
 def main():
     pygame.init()
