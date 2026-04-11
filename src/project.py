@@ -42,7 +42,8 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
         
-        
+        player.movement()
+        player.draw()
     pygame.quit()
 
 if __name__ == "__main__":
