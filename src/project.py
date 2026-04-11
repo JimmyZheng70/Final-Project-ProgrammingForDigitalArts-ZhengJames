@@ -20,6 +20,9 @@ class Player():
         elif key(pygame.K_RIGHT):
             self.shape.x += self.speed
             self.direction = 1
+    
+    def draw(self):
+        pygame.draw.rect(s)
         
 
 def main():
