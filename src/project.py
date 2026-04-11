@@ -33,7 +33,7 @@ def main():
 
     clock = pygame.time.Clock()
     dt = 0
-    
+
     smallscreen = (800, 600)
     fullscreen = (1920, 1080)
     screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE)
@@ -50,6 +50,8 @@ def main():
         player.movement()
         player.draw()
         pygame.display.update()
+
+        dt = clock.tick(12)
     pygame.quit()
 
 if __name__ == "__main__":
