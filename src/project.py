@@ -22,6 +22,8 @@ class Player():
         elif key[pygame.K_RIGHT]:
             self.shape.x += self.speed
             self.direction = 1
+
+        # Stop player from going out of bounds
     
     def draw(self):
         pygame.draw.rect(self.screen, self.color, self.shape)
