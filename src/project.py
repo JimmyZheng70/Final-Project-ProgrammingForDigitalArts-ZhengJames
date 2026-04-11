@@ -3,9 +3,9 @@ import pygame
 
 class Player():
     def __init__(self, screen):
-        self.height = 5
-        self.width = 20
-        self.x = 5
+        self.height = 10
+        self.width = 100
+        self.x = 300
         self.y = 5
         self.shape = pygame.Rect(self.x, self.y, self.width, self.height)
         self.speed = 10
