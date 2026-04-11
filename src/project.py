@@ -53,7 +53,7 @@ def main():
         player.draw()
         pygame.display.update()
 
-        dt = clock.tick(12)
+        dt = clock.tick(20)
     pygame.quit()
 
 if __name__ == "__main__":
