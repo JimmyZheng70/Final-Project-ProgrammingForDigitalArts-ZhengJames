@@ -12,7 +12,7 @@ class Player():
         self.direction = 0
     
     def movement(self):
-        
+        self.direction = 0
         
 
 def main():
