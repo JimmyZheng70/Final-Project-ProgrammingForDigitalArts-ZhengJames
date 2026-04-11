@@ -6,7 +6,7 @@ class Player():
         self.height = 10
         self.width = 100
         self.x = 300
-        self.y = 5
+        self.y = screen.get_height() - 30
         self.shape = pygame.Rect(self.x, self.y, self.width, self.height)
         self.speed = 10
         self.direction = 0
@@ -38,6 +38,7 @@ def main():
 
     running = True
     while running:
+        screen.fill((0, 0, 0))
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
