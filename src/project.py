@@ -45,6 +45,7 @@ def main():
         
         player.movement()
         player.draw()
+        pygame.display.update()
     pygame.quit()
 
 if __name__ == "__main__":
