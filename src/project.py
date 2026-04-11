@@ -33,7 +33,10 @@ class Player():
     
     def draw(self):
         pygame.draw.rect(self.screen, self.color, self.shape)
-        
+
+class Ball():
+    def __init__(self):
+        pass
 
 def main():
     pygame.init()
