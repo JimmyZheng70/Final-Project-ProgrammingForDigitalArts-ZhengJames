@@ -31,6 +31,9 @@ def main():
     pygame.init()
     pygame.display.set_caption("Final Project")
 
+    clock = pygame.time.Clock()
+    dt = 0
+    
     smallscreen = (800, 600)
     fullscreen = (1920, 1080)
     screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE)
