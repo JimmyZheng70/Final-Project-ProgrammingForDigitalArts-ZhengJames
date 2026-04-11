@@ -10,6 +10,7 @@ class Player():
         self.width = 20
         self.x = 5
         self.y = 5
+        self.shape = pygame.Rect(self.x, self.y, self.width, self.height)
         
 
 def main():
