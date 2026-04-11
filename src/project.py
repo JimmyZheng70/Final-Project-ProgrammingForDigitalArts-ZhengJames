@@ -2,7 +2,7 @@ import pygame
 # TODO: Create a player rectangle at the bottom, allow player to control that rectangle, finish the resizability of the game, and anything else this week.
 
 class Player():
-    def __init__(self):
+    def __init__(self, screen):
         self.height = 5
         self.width = 20
         self.x = 5
@@ -10,6 +10,7 @@ class Player():
         self.shape = pygame.Rect(self.x, self.y, self.width, self.height)
         self.speed = 10
         self.direction = 0
+        self.screen = screen
     
     def movement(self):
         self.direction = 0
