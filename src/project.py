@@ -10,6 +10,9 @@ class Player():
         self.shape = pygame.Rect(self.x, self.y, self.width, self.height)
         self.speed = 10
         self.direction = 0
+    
+    def movement(self):
+        
         
 
 def main():
