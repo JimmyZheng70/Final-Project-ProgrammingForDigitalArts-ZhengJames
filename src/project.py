@@ -23,7 +23,7 @@ class Player():
             self.direction = 1
     
     def draw(self):
-        pygame.draw.rect(s)
+        pygame.draw.rect(self.screen, (255, 255, 255), self.shape)
         
 
 def main():
