@@ -43,7 +43,6 @@ class Ball():
         self.direction = 0 # Direction of the ball moving
         self.color = color # Colormof ball, future code will need to chnage the color
         self.screen = screen
-        pass
 
     def movement(self):
         pass
