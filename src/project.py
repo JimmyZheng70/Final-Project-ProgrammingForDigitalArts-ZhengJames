@@ -1,5 +1,5 @@
 import pygame
-# TODO: 
+# TODO: Create the Ball and its mechanics, cretae blocks and make them be destroyed, plus anything else if enough time.
 
 class Player():
     def __init__(self, screen, color=(255, 0, 255)):
