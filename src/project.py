@@ -35,7 +35,7 @@ class Player():
         pygame.draw.rect(self.screen, self.color, self.shape)
 
 class Ball():
-    def __init__(self):
+    def __init__(self, screen, color=(255, 0, 255)):
         # Shape and Size of the ball
         # Speed movement
         # Direction, will change each bounce
