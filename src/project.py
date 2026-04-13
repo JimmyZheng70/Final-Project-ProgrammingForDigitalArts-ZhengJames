@@ -37,7 +37,7 @@ class Player():
 class Ball():
     def __init__(self, screen, color=(255, 0, 255)):
         # Ball Measurements
-        self.radius = 20
+        self.radius = 13
         self.center = (self.radius, self.radius)
         self.speed = 15 # Speed of Ball
         self.direction = 0 # Direction of the ball moving
