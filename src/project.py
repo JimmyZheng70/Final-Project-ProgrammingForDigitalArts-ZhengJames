@@ -40,6 +40,8 @@ class Ball():
         # Speed movement
         # Direction, will change each bounce
         # color, will need to switch it as well.
+        self.color = color
+        self.screen = screen
         pass
 
     def movement(self):
