@@ -81,6 +81,7 @@ def main():
                 is_fullscreen = False
                 screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE) # Fix later
             
+            # Movement
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
                     print("Left")
