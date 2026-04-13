@@ -50,6 +50,9 @@ class Ball():
     def bounce(self):
         pass
 
+    def draw(self):
+        
+
 def main():
     pygame.init()
     pygame.display.set_caption("Final Project")
