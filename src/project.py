@@ -36,15 +36,12 @@ class Player():
 
 class Ball():
     def __init__(self, screen, color=(255, 0, 255)):
-        # Shape and Size of the ball
+        # Ball Measurements
         self.radius = 20
         self.center = (self.radius, self.radius)
-        # Speed movement
-        self.speed = 15
-        # Direction, will change each bounce
-        self.direction = 0
-        # color, will need to switch it as well.
-        self.color = color
+        self.speed = 15 # Speed of Ball
+        self.direction = 0 # Direction of the ball moving
+        self.color = color # Colormof ball, future code will need to chnage the color
         self.screen = screen
         pass
 
