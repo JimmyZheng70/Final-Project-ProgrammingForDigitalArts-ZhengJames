@@ -80,6 +80,13 @@ def main():
             elif event.type == pygame.VIDEORESIZE and is_fullscreen == False:
                 is_fullscreen = False
                 screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE) # Fix later
+            
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    print("Left")
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_RIGHT:
+                    print("Right")
         
         player.movement()
         player.draw()
