@@ -40,7 +40,9 @@ class Ball():
         self.radius = 20
         self.center = (self.radius, self.radius)
         # Speed movement
+        self.speed = 15
         # Direction, will change each bounce
+        self.direction = 0
         # color, will need to switch it as well.
         self.color = color
         self.screen = screen
