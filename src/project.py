@@ -51,7 +51,7 @@ class Ball():
         pass
 
     def draw(self):
-        
+        pygame.draw.cirlce(self.screen, self.color, self.center, self.radius)
 
 def main():
     pygame.init()
@@ -65,6 +65,7 @@ def main():
     screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE)
 
     player = Player(screen)
+    ball = Ball(screen)
 
     is_fullscreen = False
     running = True
@@ -82,6 +83,7 @@ def main():
         
         player.movement()
         player.draw()
+        ball.draw()
         pygame.display.update()
 
         dt = clock.tick(20)
