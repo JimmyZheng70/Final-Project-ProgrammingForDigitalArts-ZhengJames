@@ -51,7 +51,7 @@ class Ball():
         pass
 
     def draw(self):
-        pygame.draw.cirlce(self.screen, self.color, self.center, self.radius)
+        pygame.draw.circle(self.screen, self.color, self.center, self.radius)
 
 def main():
     pygame.init()
