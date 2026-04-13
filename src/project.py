@@ -41,7 +41,7 @@ class Ball():
         self.center = (self.radius, self.radius)
         self.speed = 15 # Speed of Ball
         self.direction = 0 # Direction of the ball moving
-        self.color = color # Colormof ball, future code will need to chnage the color
+        self.color = color # Color of ball, future code will need to chnage the color
         self.screen = screen
 
     def movement(self):
