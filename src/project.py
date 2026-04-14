@@ -72,7 +72,7 @@ def main():
     screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE)
 
     player = Player(screen)
-    ball = Ball((300, 500), screen)
+    ball = Ball((0, 0), screen)
 
     is_fullscreen = False
     running = True
