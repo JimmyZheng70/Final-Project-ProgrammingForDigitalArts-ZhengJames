@@ -44,6 +44,9 @@ class Ball():
         self.color = color # Color of ball, future code will need to chnage the color
         self.screen = screen
 
+    def update(self):
+        self.movement()
+
     def movement(self):
         x, y = self.pos
         y += self.size * self.direction
@@ -93,7 +96,7 @@ def main():
         
         player.movement()
         player.draw()
-        ball.draw()
+        ball.update()
         pygame.display.update()
 
         dt = clock.tick(20)
