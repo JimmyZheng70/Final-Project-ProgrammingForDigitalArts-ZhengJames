@@ -46,6 +46,7 @@ class Ball():
         self.pos = pos
 
     def update(self):
+        self.draw()
         self.movement()
 
     def movement(self):
@@ -71,7 +72,7 @@ def main():
     screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE)
 
     player = Player(screen)
-    ball = Ball((0, 0), screen)
+    ball = Ball((300, 500), screen)
 
     is_fullscreen = False
     running = True
