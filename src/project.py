@@ -43,14 +43,14 @@ class Ball():
         self.direction = 0 # Direction of the ball moving
         self.color = color # Color of ball, future code will need to chnage the color
         self.screen = screen
-        self.position = pos
+        self.pos = pos
 
     def update(self):
         self.movement()
 
     def movement(self):
         x, y = self.pos
-        y += self.size * self.direction
+        y += self.radius * self.direction
         self.pos = (x, y)
 
     def bounce(self):
