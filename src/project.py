@@ -45,7 +45,9 @@ class Ball():
         self.screen = screen
 
     def movement(self):
-        pass
+        x, y = self.pos
+        y += self.size * self.direction
+        self.pos = (x, y)
 
     def bounce(self):
         pass
