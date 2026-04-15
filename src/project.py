@@ -52,9 +52,8 @@ class Ball():
 
     def movement(self):
         pygame.draw.circle(self.screen, self.color, [self.x, self.y], self.radius)
-        x -= self.speed
-        y -= self.speed
-        self.pos = (x, y)
+        self.x -= self.speed
+        self.y -= self.speed
 
     def bounce(self):
         pass
