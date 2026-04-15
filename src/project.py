@@ -50,6 +50,7 @@ class Ball():
         self.movement()
 
     def movement(self):
+        pygame.draw.circle(self.screen, self.color, self.pos, self.radius)
         x, y = self.pos
         x -= self.speed
         y -= self.speed
@@ -59,7 +60,7 @@ class Ball():
         pass
 
     def draw(self):
-        pygame.draw.circle(self.screen, self.color, self.center, self.radius)
+        pass
 
 def main():
     pygame.init()
