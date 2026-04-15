@@ -35,7 +35,7 @@ class Player():
         pygame.draw.rect(self.screen, self.color, self.shape)
 
 class Ball():
-    def __init__(self, pos, screen, color=(255, 0, 255)):
+    def __init__(self, x, y, screen, color=(255, 0, 255)):
         # Ball Measurements
         self.radius = 13
         self.center = (self.radius, self.radius)
@@ -43,7 +43,8 @@ class Ball():
         self.direction = 0 # Direction of the ball moving
         self.color = color # Color of ball, future code will need to chnage the color
         self.screen = screen
-        self.pos = pos
+        self.x = x
+        self.y = y
 
     def update(self):
         self.draw()
@@ -74,7 +75,7 @@ def main():
     screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE)
 
     player = Player(screen)
-    ball = Ball((0, 0), screen)
+    ball = Ball(300, 800, screen)
 
     is_fullscreen = False
     running = True
