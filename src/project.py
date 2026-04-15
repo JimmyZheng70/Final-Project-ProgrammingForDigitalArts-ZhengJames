@@ -51,8 +51,8 @@ class Ball():
 
     def movement(self):
         pygame.draw.circle(self.screen, self.color, [self.x, self.y], self.radius)
-        #self.x -= self.speed
-        #self.y -= self.speed
+        self.x -= self.speed
+        self.y -= self.speed
 
     def bounce(self):
         pass
@@ -69,7 +69,7 @@ def main():
     screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE)
 
     player = Player(screen)
-    ball = Ball(300, 650, screen)
+    ball = Ball(350, 650, screen)
 
     is_fullscreen = False
     running = True
