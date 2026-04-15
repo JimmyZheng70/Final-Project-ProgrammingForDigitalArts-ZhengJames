@@ -51,7 +51,8 @@ class Ball():
 
     def movement(self):
         x, y = self.pos
-        y += self.radius * self.direction
+        x -= self.speed
+        y -= self.speed
         self.pos = (x, y)
 
     def bounce(self):
