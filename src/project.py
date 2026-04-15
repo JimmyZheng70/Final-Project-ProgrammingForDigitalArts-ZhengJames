@@ -51,8 +51,8 @@ class Ball():
 
     def movement(self):
         pygame.draw.circle(self.screen, self.color, [self.x, self.y], self.radius)
-        self.x -= self.speed
-        self.y -= self.speed
+        #self.x -= self.speed
+        #self.y -= self.speed
 
     def bounce(self):
         pass
@@ -64,7 +64,7 @@ def main():
     clock = pygame.time.Clock()
     dt = 0
 
-    smallscreen = (800, 600)
+    smallscreen = (800, 700)
     fullscreen = (1920, 1080)
     screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE)
 
