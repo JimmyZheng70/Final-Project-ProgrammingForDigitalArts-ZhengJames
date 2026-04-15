@@ -47,7 +47,6 @@ class Ball():
         self.y = y
 
     def update(self):
-        self.draw()
         self.movement()
 
     def movement(self):
@@ -56,9 +55,6 @@ class Ball():
         self.y -= self.speed
 
     def bounce(self):
-        pass
-
-    def draw(self):
         pass
 
 def main():
