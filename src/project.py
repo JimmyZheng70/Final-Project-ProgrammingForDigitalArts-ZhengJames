@@ -83,7 +83,7 @@ def main():
             elif event.type == pygame.VIDEORESIZE and is_fullscreen == False:
                 is_fullscreen = True
                 screen = pygame.display.set_mode(fullscreen, pygame.RESIZABLE)
-            elif event.type == pygame.VIDEORESIZE and is_fullscreen == False:
+            elif event.type == pygame.VIDEORESIZE and is_fullscreen == True:
                 is_fullscreen = False
                 screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE) # Fix later
             
