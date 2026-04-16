@@ -75,6 +75,7 @@ def main():
 
     is_fullscreen = False
     running = True
+    direction_input = 0
     while running:
         screen.fill((0, 0, 0))
         for event in pygame.event.get():
@@ -90,12 +91,12 @@ def main():
             # Movement
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
-                    print("Left")
+                    direction_input = -1
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RIGHT:
-                    print("Right")
+                    direction_input = 1
         
-        player.update()
+        player.update(direction_input)
         ball.update()
         pygame.display.update()
 
