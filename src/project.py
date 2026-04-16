@@ -29,6 +29,8 @@ class Player():
             self.shape.left = 0
         if self.shape.right > self.screen.get_width():
             self.shape.right = self.screen.get_width()
+
+        self.shape.y = self.screen.get_height() - 40
     
     def draw(self):
         pygame.draw.rect(self.screen, self.color, self.shape)
