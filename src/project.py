@@ -13,6 +13,10 @@ class Player():
         self.screen = screen
         self.color = color # Change later to make it change color
     
+    def update(self):
+        self.movement()
+        self.draw()
+
     def movement(self):
         self.direction = 0
         key = pygame.key.get_pressed()
@@ -93,8 +97,7 @@ def main():
                 if event.key == pygame.K_RIGHT:
                     print("Right")
         
-        player.movement()
-        player.draw()
+        player.update()
         ball.update()
         pygame.display.update()
 
