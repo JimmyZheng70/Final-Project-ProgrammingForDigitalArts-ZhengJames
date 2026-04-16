@@ -13,22 +13,23 @@ class Player():
         self.screen = screen
         self.color = color # Change later to make it change color
     
-    def move_left(self):
+    def movement(self):
         self.direction = 0
-        self.shape.x -= self.speed
-        self.direction = -1
+        key = pygame.key.get_pressed()
+        if key[pygame.K_LEFT]:
+            self.shape.x -= self.speed
+            self.direction = -1
+        elif key[pygame.K_RIGHT]:
+            self.shape.x += self.speed
+            self.direction = 1
 
         # Stop player from going out of bounds
         if self.shape.left < 0:
             self.shape.left = 0
-
-    def move_right(self):
-        self.direction = 0
-        self.shape.x += self.speed
-        self.direction = 1
-
         if self.shape.right > self.screen.get_width():
             self.shape.right = self.screen.get_width()
+
+        self.shape.y = self.screen.get_height() - 40
     
     def draw(self):
         pygame.draw.rect(self.screen, self.color, self.shape)
@@ -87,11 +88,12 @@ def main():
             # Movement
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
-                    player.move_left()
+                    print("Left")
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RIGHT:
-                    player.move_right()
+                    print("Right")
         
+        player.movement()
         player.draw()
         ball.update()
         pygame.display.update()
