@@ -74,7 +74,6 @@ def main():
 
     is_fullscreen = False
     running = True
-    direction_input = 0
     while running:
         screen.fill((0, 0, 0))
         for event in pygame.event.get():
@@ -88,10 +87,11 @@ def main():
                 screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE) # Fix later
             
             # Movement
+            direction_input = 0
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
                     direction_input = -1
-            if event.type == pygame.KEYDOWN:
+            elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RIGHT:
                     direction_input = 1
         
