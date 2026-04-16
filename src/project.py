@@ -13,7 +13,7 @@ class Player():
         self.screen = screen
         self.color = color # Change later to make it change color
     
-    def movement(self):
+    def move_left(self):
         self.direction = 0
         key = pygame.key.get_pressed()
         if key[pygame.K_LEFT]:
@@ -30,6 +30,8 @@ class Player():
             self.shape.right = self.screen.get_width()
 
         self.shape.y = self.screen.get_height() - 40
+
+    def move_right(self):
     
     def draw(self):
         pygame.draw.rect(self.screen, self.color, self.shape)
@@ -88,7 +90,7 @@ def main():
             # Movement
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
-                    print("Left")
+                    
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RIGHT:
                     print("Right")
