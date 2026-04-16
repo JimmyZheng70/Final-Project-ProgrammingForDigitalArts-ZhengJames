@@ -72,6 +72,8 @@ def main():
     player = Player(screen)
     ball = Ball(350, 650, screen)
 
+    key = pygame.key.get_pressed()
+
     is_fullscreen = False
     running = True
     direction_input = 0
@@ -87,13 +89,11 @@ def main():
                 is_fullscreen = False
                 screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE) # Fix later
             
-            # Movement
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LEFT:
-                    direction_input = -1
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_RIGHT:
-                    direction_input = 1
+        # Movement
+        if key[pygame.K_LEFT]:
+            direction_input = -1
+        if key[pygame.K_RIGHT]:
+            direction_input = 1
         
         player.update(direction_input)
         ball.update()
