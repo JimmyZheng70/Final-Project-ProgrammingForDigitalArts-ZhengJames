@@ -22,8 +22,6 @@ class Player():
         if self.shape.left < 0:
             self.shape.left = 0
 
-        self.shape.y = self.screen.get_height() - 40
-
     def move_right(self):
         self.direction = 0
         self.shape.x += self.speed
