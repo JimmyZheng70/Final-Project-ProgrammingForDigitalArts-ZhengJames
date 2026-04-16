@@ -13,19 +13,17 @@ class Player():
         self.screen = screen
         self.color = color # Change later to make it change color
     
-    def update(self):
-        self.movement()
+    def update(self,direction=0):
+        self.movement(direction)
         self.draw()
 
-    def movement(self):
-        self.direction = 0
+    def movement(self, direction=0):
+        self.direction = direction
         key = pygame.key.get_pressed()
-        if key[pygame.K_LEFT]:
+        if self.direction == -1:
             self.shape.x -= self.speed
-            self.direction = -1
-        elif key[pygame.K_RIGHT]:
+        elif self.direction == 1:
             self.shape.x += self.speed
-            self.direction = 1
 
         # Stop player from going out of bounds
         if self.shape.left < 0:
