@@ -57,8 +57,8 @@ class Ball():
         if self.ball.right > self.screen.get_width():
             self.speed *= -1
 
-        self.x -= self.speed
-        self.y -= self.speed
+        self.ball.x -= self.speed
+        self.ball.y -= self.speed
 
     def draw(self):
         pygame.draw.circle(self.screen, self.color, (self.ball.x + self.radius, self.ball.y + self.radius), self.radius)
