@@ -97,6 +97,7 @@ def main():
 
     player = Player(screen)
     ball = Ball(350, 630, screen)
+    block = Blocks()
 
     is_fullscreen = False
     running = True
@@ -122,6 +123,7 @@ def main():
         
         player.update(direction_input)
         ball.update()
+        block.update()
         pygame.display.update()
 
         dt = clock.tick(20)
