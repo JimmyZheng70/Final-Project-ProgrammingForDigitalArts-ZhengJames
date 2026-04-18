@@ -72,6 +72,7 @@ class Blocks():
     def __init__(self):
         self.width = 20
         self.height = 10
+        self.color = (255, 255, 255)
 
 def main():
     pygame.init()
