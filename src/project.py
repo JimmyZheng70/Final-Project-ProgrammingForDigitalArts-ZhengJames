@@ -82,7 +82,7 @@ class Blocks():
         self.block = []
     
     def draw(self):
-        pass
+        pygame.draw.rect(self.width, self.height, self.width, self.height)
 
 def main():
     pygame.init()
