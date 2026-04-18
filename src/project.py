@@ -74,6 +74,16 @@ class Blocks():
         self.height = 10
         self.color = (255, 255, 255)
 
+    def update(self):
+        self.make_block()
+        self.draw()
+        
+    def make_block(self):
+        pass
+    
+    def draw(self):
+        pass
+
 def main():
     pygame.init()
     pygame.display.set_caption("Final Project")
