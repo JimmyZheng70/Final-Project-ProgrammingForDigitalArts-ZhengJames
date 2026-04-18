@@ -67,10 +67,11 @@ class Ball():
 
     def draw(self):
         pygame.draw.circle(self.screen, self.color, (self.ball.x + self.radius, self.ball.y + self.radius), self.radius)
-        
+
 class Blocks():
     def __init__(self):
-        pass
+        self.width = 20
+        self.height = 10
 
 def main():
     pygame.init()
