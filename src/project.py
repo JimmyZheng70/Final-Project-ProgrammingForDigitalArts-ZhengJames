@@ -46,6 +46,7 @@ class Ball():
         self.screen = screen
         self.x = x
         self.y = y
+        self.ball = pygame.Rect(self.x, self.y, self.radius * 2, self.radius * 2)
 
     def update(self):
         self.movement()
