@@ -58,7 +58,9 @@ class Ball():
             self.speed *= -1
         if self.ball.top < 0:
             self.speed *= -1
-            
+        if self.ball.bottom < 0:
+            self.speed *= -1
+
         self.ball.x -= self.speed
         self.ball.y -= self.speed
 
