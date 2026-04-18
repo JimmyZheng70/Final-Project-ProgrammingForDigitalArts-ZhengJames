@@ -52,6 +52,11 @@ class Ball():
         self.movement()
 
     def movement(self):
+        if self.ball.left < 0:
+            self.ball.left = 0
+        if self.ball.right > self.screen.get_width():
+            self.ball.right = self.screen.get_width()
+
         self.x -= self.speed
         self.y -= self.speed
 
