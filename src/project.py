@@ -49,9 +49,9 @@ class Ball():
         self.ball = pygame.Rect(self.x, self.y, self.radius * 2, self.radius * 2)
 
     def update(self):
-        self.movement()
         self.draw()
-        
+        self.movement()
+
     def movement(self):
         self.x -= self.speed
         self.y -= self.speed
