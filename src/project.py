@@ -39,7 +39,6 @@ class Ball():
     def __init__(self, x, y, screen, color=(255, 0, 255)):
         # Ball Measurements
         self.radius = 13
-        self.center = (self.radius, self.radius)
         self.speed = 15 # Speed of Ball
         self.direction = 0 # Direction of the ball moving
         self.color = color # Color of ball, future code will need to chnage the color
