@@ -50,14 +50,14 @@ class Ball():
 
     def update(self):
         self.movement()
-
+        self.draw()
+        
     def movement(self):
-        pygame.draw.circle(self.screen, self.color, [self.x, self.y], self.radius)
         self.x -= self.speed
         self.y -= self.speed
 
-    def bounce(self):
-        pass
+    def draw(self):
+        pygame.draw.circle(self.screen, self.color, [self.x, self.y], self.radius)
 
 def main():
     pygame.init()
