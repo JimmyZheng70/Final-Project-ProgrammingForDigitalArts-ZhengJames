@@ -77,9 +77,9 @@ class Blocks():
     def update(self):
         self.make_block()
         self.draw()
-        
+
     def make_block(self):
-        pass
+        self.block = []
     
     def draw(self):
         pass
