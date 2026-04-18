@@ -55,11 +55,11 @@ class Ball():
     def movement(self):
         if self.ball.left < 0:
             self.speed_x *= -1
-        if self.ball.right > self.screen.get_width():
+        elif self.ball.right > self.screen.get_width():
             self.speed_x *= -1
-        if self.ball.top < 0:
+        elif self.ball.top < 0:
             self.speed_y *= -1
-        if self.ball.bottom < 0:
+        elif self.ball.bottom < 0:
             self.speed_y *= -1
 
         self.ball.x -= self.speed_x
