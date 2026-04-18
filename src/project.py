@@ -60,7 +60,7 @@ class Ball():
         elif self.ball.top < 0:
             self.speed_y *= -1
         elif self.ball.bottom < 0:
-            self.speed_y *= -1
+            pass # Make Game Over When hit
 
         self.ball.x -= self.speed_x
         self.ball.y -= self.speed_y
