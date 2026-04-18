@@ -39,7 +39,8 @@ class Ball():
     def __init__(self, x, y, screen, color=(255, 0, 255)):
         # Ball Measurements
         self.radius = 13
-        self.speed = 15 # Speed of Ball
+        self.speed_x = 15 # Speed of Ball
+        self.speed_y = 15
         self.direction = 0 # Direction of the ball moving
         self.color = color # Color of ball, future code will need to chnage the color
         self.screen = screen
@@ -53,16 +54,16 @@ class Ball():
 
     def movement(self):
         if self.ball.left < 0:
-            self.speed *= -1
+            self.speed_x *= -1
         if self.ball.right > self.screen.get_width():
-            self.speed *= -1
+            self.speed_x *= -1
         if self.ball.top < 0:
-            self.speed *= -1
+            self.speed_x *= -1
         if self.ball.bottom < 0:
-            self.speed *= -1
+            self.speed_X *= -1
 
-        self.ball.x -= self.speed
-        self.ball.y -= self.speed
+        self.ball.x -= self.speed_x
+        self.ball.y -= self.speed_y
 
     def draw(self):
         pygame.draw.circle(self.screen, self.color, (self.ball.x + self.radius, self.ball.y + self.radius), self.radius)
