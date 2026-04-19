@@ -80,6 +80,8 @@ class Blocks():
 
     def make_block(self):
         self.block = []
+
+        block = []
     
     def draw(self):
         pygame.draw.rect(self.width, self.height, self.width, self.height)
