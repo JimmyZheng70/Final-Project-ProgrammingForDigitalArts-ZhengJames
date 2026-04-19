@@ -91,9 +91,8 @@ class Blocks():
                 self.block.append(rect)
     
     def draw(self):
-        for row in self.block:
-            for block in row:
-                pygame.draw.rect(self.screen, self.color, block[0])
+        for block in self.block:
+            pygame.draw.rect(self.screen, self.color, block[0])
 
 def main():
     pygame.init()
