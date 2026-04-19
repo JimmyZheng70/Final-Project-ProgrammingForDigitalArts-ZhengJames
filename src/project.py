@@ -92,7 +92,7 @@ class Blocks():
     
     def draw(self):
         for block in self.block:
-            pygame.draw.rect(self.screen, self.color, block[0])
+            pygame.draw.rect(self.screen, self.color, block)
 
 def main():
     pygame.init()
