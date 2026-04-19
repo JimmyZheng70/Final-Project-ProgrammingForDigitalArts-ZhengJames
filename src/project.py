@@ -84,6 +84,8 @@ class Blocks():
     def make_block(self):
         single_block = []
 
+        for x in range(self.cols):
+
     
     def draw(self):
         pygame.draw.rect(self.width, self.height, self.width, self.height)
