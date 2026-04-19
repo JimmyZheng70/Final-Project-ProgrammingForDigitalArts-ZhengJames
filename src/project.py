@@ -86,6 +86,8 @@ class Blocks():
 
         for x in range(self.rows):
             for y in range(self.cols):
+                block_x = y + self.width
+                block_y = x + self.height
 
     
     def draw(self):
