@@ -71,22 +71,22 @@ class Ball():
 class Blocks():
     def __init__(self, screen):
         self.width = 800 // 7
-        self.height = 40
+        self.height = 50
         self.color = (255, 255, 255)
         self.cols = 7
         self.rows = 7
         self.block = []
         self.screen = screen
+        self.make_block()
 
     def update(self):
-        self.make_block()
         self.draw()
 
     def make_block(self):
         for row in range(self.rows):
             for col in range(self.cols):
-                block_x = col + self.width
-                block_y = row + self.height
+                block_x = col * self.width
+                block_y = row * self.height
                 rect = pygame.Rect(block_x, block_y, self.width, self.height)
                 self.block.append(rect)
     
