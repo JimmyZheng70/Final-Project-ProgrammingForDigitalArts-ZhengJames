@@ -69,13 +69,14 @@ class Ball():
         pygame.draw.circle(self.screen, self.color, (self.ball.x + self.radius, self.ball.y + self.radius), self.radius)
 
 class Blocks():
-    def __init__(self):
+    def __init__(self, screen):
         self.width = 20
         self.height = 10
         self.color = (255, 255, 255)
         self.cols = 7
         self.rows = 7
         self.block = []
+        self.screen = screen
 
     def update(self):
         self.make_block()
@@ -99,7 +100,7 @@ class Blocks():
     def draw(self):
         for row in self.block:
             for block in row:
-                pygame.draw.rect(self.color, block[0])
+                pygame.draw.rect(self.screen, self.color, block[0])
 
 def main():
     pygame.init()
@@ -114,7 +115,7 @@ def main():
 
     player = Player(screen)
     ball = Ball(350, 630, screen)
-    block = Blocks()
+    block = Blocks(screen)
 
     is_fullscreen = False
     running = True
