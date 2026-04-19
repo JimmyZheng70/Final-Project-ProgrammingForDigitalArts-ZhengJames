@@ -70,7 +70,7 @@ class Ball():
 
 class Blocks():
     def __init__(self, screen):
-        self.width = self.screen_width // self.cols
+        self.width = 800 // 7
         self.height = 40
         self.color = (255, 255, 255)
         self.cols = 7
