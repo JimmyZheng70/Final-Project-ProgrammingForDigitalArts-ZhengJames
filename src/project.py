@@ -83,18 +83,12 @@ class Blocks():
         self.draw()
 
     def make_block(self):
-        single_block = []
-
         for row in range(self.rows):
-            block_rows = []
             for col in range(self.cols):
                 block_x = col + self.width
                 block_y = row + self.height
                 rect = pygame.Rect(block_x, block_y, self.width, self.height)
-
-                single_block = [rect]
-                block_rows.append(single_block)
-            self.block.append(block_rows)
+                self.block.append(rect)
     
     def draw(self):
         for row in self.block:
