@@ -90,6 +90,7 @@ class Blocks():
                 block_y = row + self.height
                 rect = pygame.Rect(block_x, block_y, self.width, self.height)
 
+                single_block = [rect]   
     
     def draw(self):
         pygame.draw.rect(self.width, self.height, self.width, self.height)
