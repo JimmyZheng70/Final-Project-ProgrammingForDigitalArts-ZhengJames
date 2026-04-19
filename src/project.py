@@ -79,7 +79,7 @@ class Blocks():
         self.screen = screen
         self.make_block()
 
-    def update(self):
+    def update(self): # Create the Blocks on the screen
         self.draw()
 
     def make_block(self):
