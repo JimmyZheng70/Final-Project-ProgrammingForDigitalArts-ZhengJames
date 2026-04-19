@@ -73,6 +73,8 @@ class Blocks():
         self.width = 20
         self.height = 10
         self.color = (255, 255, 255)
+        self.cols = 7
+        self.rows = 7
 
     def update(self):
         self.make_block()
@@ -83,7 +85,6 @@ class Blocks():
 
         block = []
 
-        
     
     def draw(self):
         pygame.draw.rect(self.width, self.height, self.width, self.height)
@@ -102,9 +103,6 @@ def main():
     player = Player(screen)
     ball = Ball(350, 630, screen)
     block = Blocks()
-    
-    cols = 7
-    rows = 7
 
     is_fullscreen = False
     running = True
