@@ -84,10 +84,10 @@ class Blocks():
     def make_block(self):
         single_block = []
 
-        for x in range(self.rows):
-            for y in range(self.cols):
-                block_x = y + self.width
-                block_y = x + self.height
+        for row in range(self.rows):
+            for col in range(self.cols):
+                block_x = col + self.width
+                block_y = row + self.height
 
     
     def draw(self):
