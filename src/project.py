@@ -75,15 +75,14 @@ class Blocks():
         self.color = (255, 255, 255)
         self.cols = 7
         self.rows = 7
+        self.block = []
 
     def update(self):
         self.make_block()
         self.draw()
 
     def make_block(self):
-        self.block = []
-
-        block = []
+        single_block = []
 
     
     def draw(self):
