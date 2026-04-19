@@ -95,7 +95,6 @@ class Blocks():
                 single_block = [rect]
                 block_rows.append(single_block)
             self.block.append(block_rows)
-
     
     def draw(self):
         for row in self.block:
