@@ -99,8 +99,7 @@ class Blocks():
     def draw(self):
         for row in self.blocks:
             for block in row:
-                
-        pygame.draw.rect(self.width, self.height, self.width, self.height)
+                pygame.draw.rect(self.width, self.height, self.width, self.height)
 
 def main():
     pygame.init()
