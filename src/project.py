@@ -101,6 +101,8 @@ class Ball():
     
     # Scoreboard on the screen.
     def scoreboard(self):
+        # create a font first, then add the surface score system to the font.
+        # Draw the font inside here, with the surface and position of the scoreboard
         pass
 
 # Blocks
