@@ -66,7 +66,7 @@ class Ball():
         elif self.ball.bottom < 0:
             pass # Make Game Over When hit
 
-        if self.shape.colliderect(self.player):
+        if self.ball.colliderect(self.player):
             print("Ball Bounced")
 
         self.ball.x -= self.speed_x
@@ -114,7 +114,7 @@ def main():
     screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE)
 
     player = Player(screen)
-    ball = Ball(350, 630, Player.reference_player, screen)
+    ball = Ball(350, 630, screen, Player.reference_player)
     block = Blocks(screen)
 
     is_fullscreen = False
