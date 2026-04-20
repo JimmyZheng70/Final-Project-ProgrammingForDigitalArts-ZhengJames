@@ -138,7 +138,7 @@ def main():
     # Classes
     player = Player(screen)
     block = Blocks(screen)
-    ball = Ball(350, 630, screen, block, player)
+    ball = Ball(350, 630, screen, player, block)
 
     is_fullscreen = False
     running = True
