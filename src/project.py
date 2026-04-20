@@ -1,5 +1,10 @@
 import pygame
-# TODO: resize the ball and player to match the large screen
+# TODO: Gain points when destroying the ball
+# Set up death if the ball goes out of bounds under the player
+# Make a color switch of the ball whenever the ball hits the player
+# Make players switch their colors input
+# Resize the ball and player to match the large screen
+# Make bounce of player more interesting
 
 # Player
 class Player():
