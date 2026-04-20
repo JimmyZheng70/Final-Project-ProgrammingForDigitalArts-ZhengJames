@@ -72,6 +72,7 @@ class Blocks():
     def __init__(self, screen):
         self.width = 800 // 7
         self.height = 50
+        self.gap = 8
         self.color = (255, 255, 255)
         self.cols = 7
         self.rows = 7
