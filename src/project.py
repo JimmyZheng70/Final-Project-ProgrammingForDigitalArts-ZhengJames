@@ -72,6 +72,11 @@ class Ball():
             # If the color of player does not match with the ball, kills the player.
             self.speed_y *= -1
 
+        # Bounces off the player if in contact, Color Switch potential later.
+        if self.ball.colliderect(self.ball.shape):
+            # If the color of player does not match with the ball, kills the player.
+            self.speed_y *= -1
+
         self.ball.x -= self.speed_x
         self.ball.y -= self.speed_y
 
