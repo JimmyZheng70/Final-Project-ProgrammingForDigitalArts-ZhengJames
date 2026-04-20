@@ -1,63 +1,69 @@
 import pygame
 # TODO: Create the Ball and its mechanics, cretae blocks and make them be destroyed, resize the ball and player to match the large screen
 
+# Player
 class Player():
     def __init__(self, screen, color=(255, 0, 255)):
         self.height = 10
         self.width = 100
         self.x = 300
         self.y = screen.get_height() - 40
-        self.shape = pygame.Rect(self.x, self.y, self.width, self.height)
+        self.shape = pygame.Rect(self.x, self.y, self.width, self.height) # Creates the shape of the player
         self.speed = 20
-        self.direction = 0
-        self.screen = screen
+        self.direction = 0 # -1 for left and 1 for right
+        self.screen = screen # get the screen of the game
         self.color = color # Change later to make it change color
     
+    # Call this in main to run Player class
     def update(self,direction=0):
         self.movement(direction)
         self.draw()
 
+    # Define Movement of the Player
     def movement(self, direction=0):
         self.direction = direction
         if self.direction == -1:
-            self.shape.x -= self.speed
+            self.shape.x -= self.speed # Moves Left
         elif self.direction == 1:
-            self.shape.x += self.speed
+            self.shape.x += self.speed # Move Right
 
         # Stop player from going out of bounds
         if self.shape.left < 0:
-            self.shape.left = 0
+            self.shape.left = 0 # Left Out of Bounds
         if self.shape.right > self.screen.get_width():
-            self.shape.right = self.screen.get_width()
+            self.shape.right = self.screen.get_width() # Right Out of Bounds
 
-        self.shape.y = self.screen.get_height() - 40
+        self.shape.y = self.screen.get_height() - 40 # Set the Player near the bottom of the screen
     
+    # Draws out the Player model
     def draw(self):
         pygame.draw.rect(self.screen, self.color, self.shape)
-    
-    def reference_player(self):
-        return self.shape
 
+# Ball
 class Ball():
     def __init__(self, x, y, screen, player, block, color=(255, 0, 255)):
         # Ball Measurements
         self.radius = 13
-        self.speed_x = 15 # Speed of Ball
-        self.speed_y = 15
+        self.speed_x = 15 # Speed of Ball in X directions
+        self.speed_y = 15 # Speed of Ball in Y directions
         self.direction = 0 # Direction of the ball moving
         self.color = color # Color of ball, future code will need to chnage the color
         self.screen = screen
         self.x = x
         self.y = y
-        self.ball = pygame.Rect(self.x, self.y, self.radius, self.radius)
+        self.ball = pygame.Rect(self.x, self.y, self.radius, self.radius) # The Ball's Shape
+        # Get references from other classes
         self.player = player
         self.block = block
 
+    # Update Method to run the Ball
     def update(self):
         self.draw()
         self.movement()
 
+    # Movement of the Ball
     def movement(self):
+        # If it hits the wall, bounces out.
         if self.ball.left < 0:
             self.speed_x *= -1
         elif self.ball.right > self.screen.get_width():
@@ -72,33 +78,37 @@ class Ball():
             # If the color of player does not match with the ball, kills the player.
             self.speed_y *= -1
 
-        # Bounces off the player if in contact, Color Switch potential later.
+        # Checks collision with Blocks
         if self.ball.colliderect(self.block.shape):
-            # If the color of player does not match with the ball, kills the player.
             self.speed_y *= -1
 
+        # Ball Movement Calculations
         self.ball.x -= self.speed_x
         self.ball.y -= self.speed_y
 
+    # Drawing the Ball on the screen
     def draw(self):
         pygame.draw.circle(self.screen, self.color, (self.ball.x + self.radius, self.ball.y + self.radius), self.radius)
 
+# Blocks
 class Blocks():
     def __init__(self, screen):
+        # Get the Blocks height and width, plus gaps to seperate them.
         self.width = 200
         self.height = 35
         self.gap = 8
         self.color = (255, 255, 255)
         self.cols = 7
         self.rows = 7
-        self.block = []
+        self.block = [] # The blocks made to put into a list
         self.screen = screen
-        self.make_block()
+        self.make_block() # Makes the Block once when run
         self.shape = pygame.Rect()
 
     def update(self): # Create the Blocks on the screen
         self.draw()
 
+    # Create the blocks and place them into a list for later use
     def make_block(self):
         for row in range(self.rows):
             for col in range(self.cols):
@@ -107,10 +117,12 @@ class Blocks():
                 self.shape = pygame.Rect(block_x, block_y, self.width, self.height)
                 self.block.append(self.shape)
     
+    # Draw out the ball
     def draw(self):
         for block in self.block:
             pygame.draw.rect(self.screen, self.color, block)
 
+# MAIN
 def main():
     pygame.init()
     pygame.display.set_caption("Final Project")
@@ -118,19 +130,22 @@ def main():
     clock = pygame.time.Clock()
     dt = 0
 
+    # Screens
     smallscreen = (800, 700)
     fullscreen = (1920, 1080)
     screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE)
 
+    # Classes
     player = Player(screen)
     block = Blocks(screen)
     ball = Ball(350, 630, screen, block, player)
 
     is_fullscreen = False
     running = True
+    # Running the Game
     while running:
-        screen.fill((0, 0, 0))
-        for event in pygame.event.get():
+        screen.fill((0, 0, 0)) # Fills the game as black background
+        for event in pygame.event.get(): # For exiting or resizing the game.
             if event.type == pygame.QUIT:
                 running = False
             elif event.type == pygame.VIDEORESIZE and is_fullscreen == False:
@@ -144,17 +159,18 @@ def main():
         key = pygame.key.get_pressed()
         direction_input = 0
         if key[pygame.K_LEFT]:
-            direction_input = -1
+            direction_input = -1 # Goes Left
         elif key[pygame.K_RIGHT]:
-            direction_input = 1
+            direction_input = 1 # Goes Right
         
+        # Update
         player.update(direction_input)
         ball.update()
         block.update()
         pygame.display.update()
 
         dt = clock.tick(20)
-    pygame.quit()
+    pygame.quit() # Stops the game when player leaves
 
 if __name__ == "__main__":
     main()
