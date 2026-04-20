@@ -114,7 +114,7 @@ def main():
     screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE)
 
     player = Player(screen)
-    ball = Ball(350, 630, screen, Player.reference_player)
+    ball = Ball(350, 630, screen, player)
     block = Blocks(screen)
 
     is_fullscreen = False
