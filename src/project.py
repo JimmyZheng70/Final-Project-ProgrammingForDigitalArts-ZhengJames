@@ -36,7 +36,7 @@ class Player():
         pygame.draw.rect(self.screen, self.color, self.shape)
 
 class Ball():
-    def __init__(self, x, y, screen, color=(255, 0, 255)):
+    def __init__(self, x, y, screen, player, color=(255, 0, 255)):
         # Ball Measurements
         self.radius = 13
         self.speed_x = 15 # Speed of Ball
@@ -47,6 +47,7 @@ class Ball():
         self.x = x
         self.y = y
         self.ball = pygame.Rect(self.x, self.y, self.radius, self.radius)
+        self.player = player
 
     def update(self):
         self.draw()
