@@ -86,8 +86,8 @@ class Blocks():
     def make_block(self):
         for row in range(self.rows):
             for col in range(self.cols):
-                block_x = col * self.width
-                block_y = row * self.height
+                block_x = col * (self.width + self.gap)
+                block_y = row * (self.height + self.gap)
                 rect = pygame.Rect(block_x, block_y, self.width, self.height)
                 self.block.append(rect)
     
