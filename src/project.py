@@ -98,6 +98,10 @@ class Ball():
     # Drawing the Ball on the screen
     def draw(self):
         pygame.draw.circle(self.screen, self.color, (self.ball.x + self.radius, self.ball.y + self.radius), self.radius)
+    
+    # Scoreboard on the screen.
+    def scoreboard(self):
+        pass
 
 # Blocks
 class Blocks():
