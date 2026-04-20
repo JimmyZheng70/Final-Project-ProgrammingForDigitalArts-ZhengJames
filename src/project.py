@@ -2,7 +2,7 @@ import pygame
 # TODO: Create the Ball and its mechanics, cretae blocks and make them be destroyed, resize the ball and player to match the large screen
 
 class Player():
-    def __init__(self, screen, ball, color=(255, 0, 255)):
+    def __init__(self, screen, color=(255, 0, 255)):
         self.height = 10
         self.width = 100
         self.x = 300
@@ -12,7 +12,6 @@ class Player():
         self.direction = 0
         self.screen = screen
         self.color = color # Change later to make it change color
-        self.ball = ball
     
     def update(self,direction=0):
         self.movement(direction)
@@ -30,10 +29,6 @@ class Player():
             self.shape.left = 0
         if self.shape.right > self.screen.get_width():
             self.shape.right = self.screen.get_width()
-
-        # If contact with Ball, See if it is the right color and if not, kills the player
-        if self.ball.colliderect(self.ball.shape):
-            print("Ball Color Mechanic")
 
         self.shape.y = self.screen.get_height() - 40
     
@@ -71,7 +66,9 @@ class Ball():
         elif self.ball.bottom < 0:
             pass # Make Game Over When hit
         
-        if self.ball.colliderect(self.player.shape): # Bounces off the player if in contact, Color Switch potential later.
+        # Bounces off the player if in contact, Color Switch potential later.
+        if self.ball.colliderect(self.player.shape):
+            # If the color of player does not match with the ball, kills the player.
             self.speed_y *= -1
 
         self.ball.x -= self.speed_x
@@ -118,7 +115,7 @@ def main():
     fullscreen = (1920, 1080)
     screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE)
 
-    player = Player(screen, ball)
+    player = Player(screen)
     ball = Ball(350, 630, screen, player)
     block = Blocks(screen)
 
