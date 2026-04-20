@@ -67,7 +67,7 @@ class Ball():
             pass # Make Game Over When hit
 
         if self.ball.colliderect(self.player.shape):
-            
+            self.speed_y *= -1
 
         self.ball.x -= self.speed_x
         self.ball.y -= self.speed_y
