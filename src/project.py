@@ -82,6 +82,7 @@ class Ball():
         for block in self.block.block[:]:
             if self.ball.colliderect(block):
                 self.speed_y *= -1
+                self.block.block.remove(block)
 
         # Ball Movement Calculations
         self.ball.x -= self.speed_x
