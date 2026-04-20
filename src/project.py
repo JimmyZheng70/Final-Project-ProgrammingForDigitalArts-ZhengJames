@@ -80,6 +80,7 @@ class Ball():
 
         # Checks collision with Blocks
         if self.ball.colliderect(self.block.shape):
+            print("Ball interact with blocks")
             self.speed_y *= -1
 
         # Ball Movement Calculations
