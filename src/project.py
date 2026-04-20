@@ -60,6 +60,7 @@ class Ball():
         # Get references from other classes
         self.player = player
         self.block = block
+        self.points = 0
 
     # Update Method to run the Ball
     def update(self):
@@ -82,6 +83,7 @@ class Ball():
         if self.ball.colliderect(self.player.shape):
             # If the color of player does not match with the ball, kills the player.
             self.speed_y *= -1
+            self.points += 100
 
         # Checks collision with Blocks
         for block in self.block.block[:]:
