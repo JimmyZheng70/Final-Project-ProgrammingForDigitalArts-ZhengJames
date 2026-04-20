@@ -73,7 +73,7 @@ class Ball():
             self.speed_y *= -1
 
         # Bounces off the player if in contact, Color Switch potential later.
-        if self.ball.colliderect(self.ball.shape):
+        if self.ball.colliderect(self.block.shape):
             # If the color of player does not match with the ball, kills the player.
             self.speed_y *= -1
 
@@ -94,6 +94,7 @@ class Blocks():
         self.block = []
         self.screen = screen
         self.make_block()
+        self.shape = pygame.Rect()
 
     def update(self): # Create the Blocks on the screen
         self.draw()
@@ -103,8 +104,8 @@ class Blocks():
             for col in range(self.cols):
                 block_x = col * (self.width + self.gap)
                 block_y = row * (self.height + self.gap)
-                rect = pygame.Rect(block_x, block_y, self.width, self.height)
-                self.block.append(rect)
+                self.shape = pygame.Rect(block_x, block_y, self.width, self.height)
+                self.block.append(self.shape)
     
     def draw(self):
         for block in self.block:
