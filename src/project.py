@@ -34,6 +34,9 @@ class Player():
     
     def draw(self):
         pygame.draw.rect(self.screen, self.color, self.shape)
+    
+    def reference_player(self):
+        return self.shape
 
 class Ball():
     def __init__(self, x, y, screen, player, color=(255, 0, 255)):
