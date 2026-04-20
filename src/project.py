@@ -66,7 +66,7 @@ class Ball():
         elif self.ball.bottom < 0:
             pass # Make Game Over When hit
 
-        if self.ball.colliderect(self.player):
+        if self.ball.colliderect(self.player.shape):
             print("Ball Bounced")
 
         self.ball.x -= self.speed_x
