@@ -1,5 +1,5 @@
 import pygame
-# TODO: Create the Ball and its mechanics, cretae blocks and make them be destroyed, resize the ball and player to match the large screen
+# TODO: resize the ball and player to match the large screen
 
 # Player
 class Player():
