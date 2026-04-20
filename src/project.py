@@ -79,8 +79,9 @@ class Ball():
             self.speed_y *= -1
 
         # Checks collision with Blocks
-        if self.ball.colliderect(self.block.shape):
-            self.speed_y *= -1
+        for block in self.block.shape[:]:
+            if self.ball.colliderect(block):
+                self.speed_y *= -1
 
         # Ball Movement Calculations
         self.ball.x -= self.speed_x
