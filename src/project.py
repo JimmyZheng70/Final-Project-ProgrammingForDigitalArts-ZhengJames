@@ -62,6 +62,7 @@ class Ball():
         self.block = block
         self.score = 0
         self.scorefont = pygame.font.SysFont(None, 12)
+        self.gameover = 0
 
     # Update Method to run the Ball
     def update(self):
