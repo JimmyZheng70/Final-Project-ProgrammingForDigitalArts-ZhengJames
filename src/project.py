@@ -106,6 +106,10 @@ class Ball():
         # create a font first, then add the surface score system to the font.
         # Draw the font inside here, with the surface and position of the scoreboard
         pass
+    
+    def death(self):
+        if self.gameover == 1:
+            self.gameover -= 1
 
 # Blocks
 class Blocks():
