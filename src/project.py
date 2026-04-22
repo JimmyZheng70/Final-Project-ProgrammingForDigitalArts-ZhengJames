@@ -19,9 +19,7 @@ class Player():
         self.screen = screen # get the screen of the game
         self.color = None# Change later to make it change color
         self.pink = pink
-        self.is_pink = True
         self.blue = blue
-        self.is_blue = False
         self.change_color = True
     
     # Call this in main to run Player class
@@ -32,9 +30,9 @@ class Player():
 
     def player_color(self, player_color=True):
         self.change_color = player_color
-        if self.is_pink == True:
+        if self.change_color == True:
             self.color = self.pink
-        elif self.is_blue == True:
+        elif self.change_color == False:
             self.color = self.blue
     
     # Define Movement of the Player
