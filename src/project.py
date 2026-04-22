@@ -8,7 +8,7 @@ import pygame
 
 # Player
 class Player():
-    def __init__(self, screen, color=(255, 0, 255)):
+    def __init__(self, screen, pink=(255, 0, 255), blue=(15, 10, 255)):
         self.height = 10
         self.width = 100
         self.x = 300
@@ -17,7 +17,11 @@ class Player():
         self.speed = 20
         self.direction = 0 # -1 for left and 1 for right
         self.screen = screen # get the screen of the game
-        self.color = color # Change later to make it change color
+        self.color = None# Change later to make it change color
+        self.pink = pink
+        self.is_pink = True
+        self.blue = blue
+        self.is_blue = False
     
     # Call this in main to run Player class
     def update(self,direction=0):
