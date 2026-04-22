@@ -193,6 +193,7 @@ def main():
 
     is_fullscreen = False
     running = True
+    change_color = True
     # Running the Game
     while running:
         screen.fill((0, 0, 0)) # Fills the game as black background
@@ -216,7 +217,7 @@ def main():
             direction_input = 1 # Goes Right
         
         if key[pygame.K_SPACE]:
-            # Switch colors
+            
         
         # Update
         player.update(direction_input)
