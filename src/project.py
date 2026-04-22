@@ -96,6 +96,12 @@ class Ball():
         # Bounces off the player if in contact, Color Switch potential later.
         if self.ball.colliderect(self.player.shape):
             # If the color of player does not match with the ball, kills the player.
+            if self.is_pink == True:
+                self.is_pink = False
+                self.is_blue = True
+            elif self.is_blue == True:
+                self.is_blue = False
+                self.is_pink = True
             self.speed_y *= -1
 
         # Checks collision with Blocks
