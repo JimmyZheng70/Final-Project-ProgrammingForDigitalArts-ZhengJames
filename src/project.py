@@ -46,7 +46,7 @@ class Player():
 
 # Ball
 class Ball():
-    def __init__(self, x, y, screen, player, block, pink=(255, 0, 255), blue=(0, 200, 0)):
+    def __init__(self, x, y, screen, player, block, pink=(255, 0, 255), blue=(15, 10, 255)):
         # Ball Measurements
         self.radius = 13
         self.speed_x = 15 # Speed of Ball in X directions
