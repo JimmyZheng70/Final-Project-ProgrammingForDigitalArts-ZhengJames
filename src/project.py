@@ -217,10 +217,13 @@ def main():
             direction_input = 1 # Goes Right
         
         if key[pygame.K_SPACE]:
-            
+            if change_color == True:
+                change_color = False
+            elif change_color == False:
+                change_color = True
         
         # Update
-        player.update(direction_input)
+        player.update(direction_input, change_color)
         ball.update()
         block.update()
         pygame.display.update()
