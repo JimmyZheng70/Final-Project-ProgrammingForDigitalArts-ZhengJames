@@ -25,9 +25,16 @@ class Player():
     
     # Call this in main to run Player class
     def update(self,direction=0):
+        self.player_color()
         self.movement(direction)
         self.draw()
 
+    def player_color(self):
+        if self.is_pink == True:
+            self.color = self.pink
+        elif self.is_blue == True:
+            self.color = self.blue
+    
     # Define Movement of the Player
     def movement(self, direction=0):
         self.direction = direction
