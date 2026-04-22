@@ -79,7 +79,7 @@ class Ball():
         elif self.ball.top < 0:
             self.speed_y *= -1
         elif self.ball.bottom < 0:
-            pass # Make Game Over When hit
+            self.gameover += 1
         
         # Bounces off the player if in contact, Color Switch potential later.
         if self.ball.colliderect(self.player.shape):
