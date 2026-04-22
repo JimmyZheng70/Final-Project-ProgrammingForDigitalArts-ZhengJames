@@ -215,6 +215,9 @@ def main():
         elif key[pygame.K_RIGHT]:
             direction_input = 1 # Goes Right
         
+        if key[pygame.K_SPACE]:
+            # Switch colors
+        
         # Update
         player.update(direction_input)
         ball.update()
