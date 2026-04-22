@@ -66,9 +66,9 @@ class Ball():
 
     # Update Method to run the Ball
     def update(self):
+        self.death()
         self.draw()
         self.movement()
-        self.death()
 
     # Movement of the Ball
     def movement(self):
