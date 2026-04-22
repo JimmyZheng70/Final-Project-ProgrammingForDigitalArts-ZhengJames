@@ -31,6 +31,7 @@ class Player():
         self.draw()
 
     def player_color(self, player_color=True):
+        self.change_color = player_color
         if self.is_pink == True:
             self.color = self.pink
         elif self.is_blue == True:
