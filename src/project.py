@@ -70,6 +70,7 @@ class Ball():
 
     # Update Method to run the Ball
     def update(self):
+        self.ball_color()
         self.death()
         self.draw()
         self.movement()
@@ -77,6 +78,9 @@ class Ball():
     def ball_color(self):
         if self.is_pink == True:
             self.color = self.pink
+        elif self.is_blue == True:
+            self.color = self.blue
+
     # Movement of the Ball
     def movement(self):
         # If it hits the wall, bounces out.
