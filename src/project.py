@@ -83,13 +83,13 @@ class Ball():
         if self.ball.colliderect(self.player.shape):
             # If the color of player does not match with the ball, kills the player.
             self.speed_y *= -1
-            self.score += 100 # Add points for score
 
         # Checks collision with Blocks
         for block in self.block.block[:]:
             if self.ball.colliderect(block):
                 self.speed_y *= -1
                 self.block.block.remove(block)
+                self.score += 100 # Add points for score
 
         # Ball Movement Calculations
         self.ball.x -= self.speed_x
