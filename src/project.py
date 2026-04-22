@@ -22,14 +22,15 @@ class Player():
         self.is_pink = True
         self.blue = blue
         self.is_blue = False
+        self.change_color = True
     
     # Call this in main to run Player class
-    def update(self,direction=0):
-        self.player_color()
+    def update(self,direction=0, player_color=True):
+        self.player_color(player_color)
         self.movement(direction)
         self.draw()
 
-    def player_color(self):
+    def player_color(self, player_color=True):
         if self.is_pink == True:
             self.color = self.pink
         elif self.is_blue == True:
