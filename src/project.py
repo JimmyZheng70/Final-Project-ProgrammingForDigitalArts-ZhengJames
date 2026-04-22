@@ -55,6 +55,8 @@ class Ball():
         self.color = None # Color of ball, future code will need to chnage the color
         self.pink = pink
         self.blue = blue
+        self.is_pink = True
+        self.is_blue = False
         self.screen = screen
         self.x = x
         self.y = y
