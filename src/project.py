@@ -72,6 +72,8 @@ class Ball():
         self.draw()
         self.movement()
 
+    def ball_color(self):
+        if self.color == None
     # Movement of the Ball
     def movement(self):
         # If it hits the wall, bounces out.
