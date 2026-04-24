@@ -77,7 +77,7 @@ class Ball():
         self.block = block
         self.score = 0
         self.scorefont = pygame.font.SysFont(None, 12)
-        self.gameover = 0
+        self.gameover = False
 
     # Update Method to run the Ball
     def update(self):
@@ -102,7 +102,7 @@ class Ball():
         elif self.ball.top < 0:
             self.speed_y *= -1
         elif self.ball.bottom < 0:
-            self.gameover += 1
+            self.gameover = True
         
         # Bounces off the player if in contact, Color Switch potential later.
         if self.ball.colliderect(self.player.shape):
@@ -137,9 +137,9 @@ class Ball():
         pass
 
     def death(self):
-        if self.gameover == 1:
-            self.gameover -= 1
+        if self.gameover:
             print("Game Over")
+            self.gameover = False
 
 # Blocks
 class Blocks():
