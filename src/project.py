@@ -17,22 +17,22 @@ class Player():
         self.speed = 20
         self.direction = 0 # -1 for left and 1 for right
         self.screen = screen # get the screen of the game
-        self.color = None# Change later to make it change color
+        self.color = None # Change later to make it change color
         self.pink = pink
         self.blue = blue
-        self.change_color = True
+        self.change_color = 1
     
     # Call this in main to run Player class
-    def update(self,direction=0, player_color=True):
+    def update(self,direction=0, player_color=1):
         self.player_color(player_color)
         self.movement(direction)
         self.draw()
 
-    def player_color(self, player_color=True):
+    def player_color(self, player_color=1):
         self.change_color = player_color
-        if self.change_color == True:
+        if self.change_color == 1:
             self.color = self.pink
-        elif self.change_color == False:
+        elif self.change_color == -1:
             self.color = self.blue
     
     # Define Movement of the Player
@@ -193,7 +193,7 @@ def main():
 
     is_fullscreen = False
     running = True
-    change_color = True
+    change_color = 1
     # Running the Game
     while running:
         screen.fill((0, 0, 0)) # Fills the game as black background
@@ -217,10 +217,7 @@ def main():
             direction_input = 1 # Goes Right
         
         if key[pygame.K_SPACE]:
-            if change_color == True:
-                change_color = False
-            elif change_color == False:
-                change_color = True
+            change_color *= -1
         
         # Update
         player.update(direction_input, change_color)
