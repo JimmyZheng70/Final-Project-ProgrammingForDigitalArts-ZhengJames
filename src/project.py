@@ -220,6 +220,7 @@ def main():
         if game_over == False:
             player.update(direction_input, change_color)
             game_over = ball.update()
+            score = ball.scoreboard(score)
         else:
             player.draw()
 
