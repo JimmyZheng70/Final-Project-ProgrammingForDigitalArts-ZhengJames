@@ -121,7 +121,7 @@ class Ball():
             if self.ball.colliderect(block):
                 self.speed_y *= -1
                 self.block.block.remove(block)
-                self.score += 10 # Add points for score
+                self.score += 1 # Add points for score
 
         # Ball Movement Calculations
         self.ball.x -= self.speed_x
