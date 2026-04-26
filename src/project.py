@@ -219,7 +219,8 @@ def main():
             change_color *= -1
         
         # Update
-        player.update(direction_input, change_color)
+        if game_over == False:
+            player.update(direction_input, change_color)
         ball.update()
         block.update()
         pygame.display.update()
