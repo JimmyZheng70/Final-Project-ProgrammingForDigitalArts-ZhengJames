@@ -228,7 +228,7 @@ def main():
 
         font = pygame.font.SysFont(None, 56)
         text = font.render("Score: " + str(score), True, (0, 255, 0))
-        screen.blit(text, (screen.get_width()//2+180, 0))
+        screen.blit(text, (screen.get_width()//2+180, screen.get_height()//1.2+75))
 
         pygame.display.update()
 
