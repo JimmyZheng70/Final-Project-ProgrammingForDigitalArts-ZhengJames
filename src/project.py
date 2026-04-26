@@ -135,9 +135,6 @@ class Ball():
     def scoreboard(self, score=0):
         score = self.score
         return score
-        #font = pygame.font.SysFont(None, 56)
-        #text = font.render("Score: " + str(self.score), True, (0, 255, 0))
-        #self.screen.blit(text, (130, 255))
 
 # Blocks
 class Blocks():
@@ -193,6 +190,7 @@ def main():
     running = True
     change_color = 1
     game_over = False
+    score = 0
     # Running the Game
     while running:
         screen.fill((0, 0, 0)) # Fills the game as black background
@@ -226,6 +224,11 @@ def main():
             player.draw()
 
         block.update()
+
+        font = pygame.font.SysFont(None, 56)
+        text = font.render("Score: " + str(score), True, (0, 255, 0))
+        screen.blit(text, (130, 255))
+
         pygame.display.update()
 
         dt = clock.tick(20)
