@@ -136,7 +136,7 @@ class Ball():
         # create a font first, then add the surface score system to the font.
         # Draw the font inside here, with the surface and position of the scoreboard
         font = pygame.font.SysFont(None, 56)
-        text = font.render("Score: " + self.score, True, (0, 255, 0))
+        text = font.render("Score: " + str(self.score), True, (0, 255, 0))
         self.screen.blit(text, (130, 255))
 
 # Blocks
