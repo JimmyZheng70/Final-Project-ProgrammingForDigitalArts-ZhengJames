@@ -134,6 +134,7 @@ class Ball():
     def scoreboard(self):
         # create a font first, then add the surface score system to the font.
         # Draw the font inside here, with the surface and position of the scoreboard
+        font = pygame.font.SysFont(None, 56)
         pass
 
 # Blocks
@@ -221,7 +222,7 @@ def main():
             game_over = ball.update()
         else:
             player.draw()
-            
+
         block.update()
         pygame.display.update()
 
