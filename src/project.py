@@ -220,6 +220,8 @@ def main():
                     ball.ball.y = 630
                     ball.speed_x = 15
                     ball.speed_y = 15
+                    ball.is_blue = False
+                    ball.is_pink = True
 
         # Hold Key Down
         # Movement
