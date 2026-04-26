@@ -101,7 +101,7 @@ class Ball():
             self.speed_x *= -1
         elif self.ball.top < 0:
             self.speed_y *= -1
-        elif self.ball.bottom < 0:
+        elif self.ball.bottom > self.screen.get_height():
             self.gameover = True
         
         # Bounces off the player if in contact, Color Switch potential later.
