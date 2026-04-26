@@ -192,6 +192,7 @@ def main():
     is_fullscreen = False
     running = True
     change_color = 1
+    game_over = False
     # Running the Game
     while running:
         screen.fill((0, 0, 0)) # Fills the game as black background
