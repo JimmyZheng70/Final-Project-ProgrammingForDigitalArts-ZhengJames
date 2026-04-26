@@ -82,9 +82,9 @@ class Ball():
     # Update Method to run the Ball
     def update(self):
         self.ball_color()
-        self.death()
         self.draw()
         self.movement()
+        return self.gameover
 
     def ball_color(self):
         if self.is_pink == True:
@@ -135,9 +135,6 @@ class Ball():
         # create a font first, then add the surface score system to the font.
         # Draw the font inside here, with the surface and position of the scoreboard
         pass
-
-    def death(self):
-        return self.gameover
 
 # Blocks
 class Blocks():
