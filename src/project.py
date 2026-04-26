@@ -216,6 +216,12 @@ def main():
         if key[pygame.K_SPACE]:
             change_color *= -1
         
+        if key[pygame.K_r]:
+            if game_over:
+                game_over = False
+            else:
+                print("nothing")
+        
         # Update
         if game_over == False:
             player.update(direction_input, change_color)
