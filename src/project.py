@@ -216,6 +216,8 @@ def main():
                 if event.key == pygame.K_r:
                     if game_over:
                         game_over = False
+                        ball.ball.x = 350
+                        ball.ball.y = 630
                     else:
                         print("nothing")
 
