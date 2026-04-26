@@ -205,6 +205,9 @@ def main():
                 is_fullscreen = False
                 screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE) # Fix later
             
+            if event.type == pygame.KEYDOWN: # Press 7 for UTD colors
+                if event.key == pygame.K_SPACE:
+                    change_color *= -1
         # Movement
         key = pygame.key.get_pressed()
         direction_input = 0
@@ -212,9 +215,6 @@ def main():
             direction_input = -1 # Goes Left
         elif key[pygame.K_RIGHT]:
             direction_input = 1 # Goes Right
-        
-        if key[pygame.K_SPACE]:
-            change_color *= -1
         
         if key[pygame.K_r]:
             if game_over:
