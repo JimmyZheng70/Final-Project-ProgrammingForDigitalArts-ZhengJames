@@ -214,14 +214,13 @@ def main():
         
         if key[pygame.K_SPACE]:
             change_color *= -1
-            print(game_over)
         
         # Update
         if game_over == False:
             player.update(direction_input, change_color)
             game_over = ball.update()
         else:
-            print("Game Over")
+            
         block.update()
         pygame.display.update()
 
