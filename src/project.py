@@ -220,6 +220,7 @@ def main():
             player.update(direction_input, change_color)
             game_over = ball.update()
         else:
+            player.draw()
             
         block.update()
         pygame.display.update()
