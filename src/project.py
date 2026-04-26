@@ -214,6 +214,7 @@ def main():
         
         if key[pygame.K_SPACE]:
             change_color *= -1
+            print(game_over)
         
         # Update
         if game_over == False:
