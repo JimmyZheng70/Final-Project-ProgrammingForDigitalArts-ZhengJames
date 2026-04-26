@@ -221,6 +221,8 @@ def main():
         # Update
         if game_over == False:
             player.update(direction_input, change_color)
+        else:
+            print("Game Over")
         game_over = ball.update()
         block.update()
         pygame.display.update()
