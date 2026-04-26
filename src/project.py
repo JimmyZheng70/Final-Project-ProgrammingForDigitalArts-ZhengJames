@@ -213,15 +213,12 @@ def main():
                     change_color *= -1
             
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_r:
-                    if game_over:
-                        game_over = False
-                        ball.ball.x = 350
-                        ball.ball.y = 630
-                        ball.speed_x = 15
-                        ball.speed_y = 15
-                    else:
-                        print("nothing")
+                if game_over and event.key == pygame.K_r:
+                    game_over = False
+                    ball.ball.x = 350
+                    ball.ball.y = 630
+                    ball.speed_x = 15
+                    ball.speed_y = 15
 
         # Hold Key Down
         # Movement
