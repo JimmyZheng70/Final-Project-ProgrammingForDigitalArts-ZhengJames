@@ -84,7 +84,7 @@ class Ball():
         self.ball_color()
         self.draw()
         self.movement()
-        self.scoreboard()
+        self.scoreboard(score=0)
         return self.gameover
 
     def ball_color(self):
@@ -132,12 +132,12 @@ class Ball():
         pygame.draw.circle(self.screen, self.color, (self.ball.x + self.radius, self.ball.y + self.radius), self.radius)
     
     # Scoreboard on the screen.
-    def scoreboard(self):
-        # create a font first, then add the surface score system to the font.
-        # Draw the font inside here, with the surface and position of the scoreboard
-        font = pygame.font.SysFont(None, 56)
-        text = font.render("Score: " + str(self.score), True, (0, 255, 0))
-        self.screen.blit(text, (130, 255))
+    def scoreboard(self, score=0):
+        score = self.score
+        return score
+        #font = pygame.font.SysFont(None, 56)
+        #text = font.render("Score: " + str(self.score), True, (0, 255, 0))
+        #self.screen.blit(text, (130, 255))
 
 # Blocks
 class Blocks():
