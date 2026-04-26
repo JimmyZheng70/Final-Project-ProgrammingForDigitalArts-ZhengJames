@@ -215,6 +215,7 @@ def main():
             if event.type == pygame.KEYDOWN:
                 if game_over and event.key == pygame.K_r:
                     game_over = False
+                    ball.gameover = False
                     ball.ball.x = 350
                     ball.ball.y = 630
                     ball.speed_x = 15
