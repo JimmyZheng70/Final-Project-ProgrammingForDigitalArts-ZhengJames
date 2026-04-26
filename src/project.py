@@ -222,6 +222,7 @@ def main():
                     ball.speed_y = 15
                     ball.is_blue = False
                     ball.is_pink = True
+                    # Also Reset the Player's Position
 
         # Hold Key Down
         # Movement
