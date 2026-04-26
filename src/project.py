@@ -218,6 +218,8 @@ def main():
                         game_over = False
                         ball.ball.x = 350
                         ball.ball.y = 630
+                        ball.speed_x = 15
+                        ball.speed_y = 15
                     else:
                         print("nothing")
 
