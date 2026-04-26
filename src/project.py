@@ -84,6 +84,7 @@ class Ball():
         self.ball_color()
         self.draw()
         self.movement()
+        self.scoreboard()
         return self.gameover
 
     def ball_color(self):
@@ -136,7 +137,7 @@ class Ball():
         # Draw the font inside here, with the surface and position of the scoreboard
         font = pygame.font.SysFont(None, 56)
         text = font.render("Score: " + self.score, True, (0, 255, 0))
-        self.screen.blit(text, (0, 0))
+        self.screen.blit(text, (130, 255))
 
 # Blocks
 class Blocks():
