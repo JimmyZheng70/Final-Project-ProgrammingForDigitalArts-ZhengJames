@@ -210,7 +210,13 @@ def main():
                 if event.key == pygame.K_SPACE:
                     change_color *= -1
             
-            if key[pyagem]
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_r:
+                    if game_over:
+                        game_over = False
+                    else:
+                        print("nothing")
+
         # Movement
         key = pygame.key.get_pressed()
         direction_input = 0
@@ -218,12 +224,6 @@ def main():
             direction_input = -1 # Goes Left
         elif key[pygame.K_RIGHT]:
             direction_input = 1 # Goes Right
-        
-        if key[pygame.K_r]:
-            if game_over:
-                game_over = False
-            else:
-                print("nothing")
         
         # Update
         if game_over == False:
