@@ -223,6 +223,7 @@ def main():
             player.update(direction_input, change_color)
         ball.update()
         block.update()
+        game_over = ball.update()
         pygame.display.update()
 
         dt = clock.tick(20)
