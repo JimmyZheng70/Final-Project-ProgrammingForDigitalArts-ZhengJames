@@ -137,9 +137,7 @@ class Ball():
         pass
 
     def death(self):
-        if self.gameover:
-            print("Game Over")
-            self.gameover = False
+        return self.gameover
 
 # Blocks
 class Blocks():
