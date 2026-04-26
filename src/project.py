@@ -194,6 +194,8 @@ def main():
     # Running the Game
     while running:
         screen.fill((0, 0, 0)) # Fills the game as black background
+
+        # Pressing Key Once
         for event in pygame.event.get(): # For exiting or resizing the game.
             if event.type == pygame.QUIT:
                 running = False
@@ -217,6 +219,7 @@ def main():
                     else:
                         print("nothing")
 
+        # Hold Key Down
         # Movement
         key = pygame.key.get_pressed()
         direction_input = 0
