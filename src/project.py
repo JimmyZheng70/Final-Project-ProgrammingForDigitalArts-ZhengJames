@@ -86,6 +86,7 @@ class Ball():
         self.draw()
         self.movement()
         self.scoreboard(score=0)
+        self.reset()
         return self.gameover
 
     def ball_color(self):
@@ -143,7 +144,7 @@ class Ball():
         return score
     
     def reset(self):
-        game_over = False
+        self.game_over = False
         self.gameover = False
         self.ball.x = 350
         self.ball.y = 630
