@@ -259,9 +259,9 @@ def main():
         # Movement
         key = pygame.key.get_pressed()
         direction_input = 0
-        if key[pygame.K_LEFT]:
+        if key[pygame.K_LEFT] or key[pygame.K_a]:
             direction_input = -1 # Goes Left
-        elif key[pygame.K_RIGHT]:
+        elif key[pygame.K_RIGHT] or key[pygame.K_d]:
             direction_input = 1 # Goes Right
         
         # Update
