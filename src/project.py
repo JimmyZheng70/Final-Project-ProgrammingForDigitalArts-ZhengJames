@@ -236,6 +236,7 @@ def main():
             if event.type == pygame.KEYDOWN:
                 if game_over and event.key == pygame.K_r:
                     game_over = False
+                    change_color = 1
                     ball.reset()
                     player.reset()
                     # Also Reset the Player's Position
