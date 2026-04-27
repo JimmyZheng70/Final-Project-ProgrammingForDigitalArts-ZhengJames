@@ -253,6 +253,9 @@ def main():
         text = font.render("Score: " + str(score), True, (0, 255, 0))
         screen.blit(text, (screen.get_width()//2+250, screen.get_height()//1.2+90))
 
+        if game_over == True:
+            gameover_font = pygame.font.SysFont(None, 80)
+
         pygame.display.update()
 
         dt = clock.tick(20)
