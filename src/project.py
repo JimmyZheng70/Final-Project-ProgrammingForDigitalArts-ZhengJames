@@ -237,6 +237,7 @@ def main():
                 if game_over and event.key == pygame.K_r:
                     game_over = False
                     ball.reset()
+                    player.reset()
                     # Also Reset the Player's Position
 
         # Hold Key Down
