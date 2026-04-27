@@ -126,8 +126,8 @@ class Ball():
 
         # Checks collision with Blocks
         for block in self.block.block[:]:
-            self.color_switch()
             if self.ball.colliderect(block):
+                self.color_switch()
                 self.speed_y *= -1
                 self.block.block.remove(block)
                 self.score += 1 # Add points for score
@@ -135,6 +135,7 @@ class Ball():
         # Ball Movement Calculations
         self.ball.x -= self.speed_x
         self.ball.y -= self.speed_y
+
     def color_switch(self):
         if self.is_pink == True:
             self.is_pink = False
