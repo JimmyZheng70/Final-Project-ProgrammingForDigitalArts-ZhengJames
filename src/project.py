@@ -56,6 +56,8 @@ class Player():
     def draw(self):
         pygame.draw.rect(self.screen, self.color, self.shape)
 
+    def reset():
+
 # Ball
 class Ball():
     def __init__(self, x, y, screen, player, block, pink=(255, 0, 255), blue=(15, 10, 255)):
