@@ -191,6 +191,7 @@ class Blocks():
             pygame.draw.rect(self.screen, self.color, block)
     
     def reset(self):
+        self.block = []
         self.make_block()
 
 # MAIN
