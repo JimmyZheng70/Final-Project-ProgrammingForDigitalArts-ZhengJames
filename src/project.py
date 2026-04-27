@@ -141,6 +141,16 @@ class Ball():
     def scoreboard(self, score=0):
         score = self.score
         return score
+    
+    def reset(self):
+        game_over = False
+        ball.gameover = False
+        ball.ball.x = 350
+        ball.ball.y = 630
+        ball.speed_x = 15
+        ball.speed_y = 15
+        ball.is_blue = False
+        ball.is_pink = True
 
 # Blocks
 class Blocks():
@@ -220,14 +230,7 @@ def main():
             
             if event.type == pygame.KEYDOWN:
                 if game_over and event.key == pygame.K_r:
-                    game_over = False
-                    ball.gameover = False
-                    ball.ball.x = 350
-                    ball.ball.y = 630
-                    ball.speed_x = 15
-                    ball.speed_y = 15
-                    ball.is_blue = False
-                    ball.is_pink = True
+                    ball.reset()
                     # Also Reset the Player's Position
 
         # Hold Key Down
