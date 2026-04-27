@@ -112,6 +112,8 @@ class Ball():
             # If the color of player does not match with the ball, kills the player.
             if self.is_pink == True and self.player.change_color == -1:
                 print("Dead")
+            elif self.is_blue == True and self.player.change_color == 1:
+                print("Dead2")
             if self.is_pink == True:
                 self.is_pink = False
                 self.is_blue = True
