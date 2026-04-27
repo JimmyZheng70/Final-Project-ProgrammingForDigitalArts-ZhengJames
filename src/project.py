@@ -189,6 +189,9 @@ class Blocks():
     def draw(self):
         for block in self.block:
             pygame.draw.rect(self.screen, self.color, block)
+    
+    def reset(self):
+        self.make_block()
 
 # MAIN
 def main():
@@ -241,6 +244,7 @@ def main():
                     score -= score
                     ball.reset()
                     player.reset()
+                    block.reset()
                     # Also Reset the Player's Position
 
         # Hold Key Down
