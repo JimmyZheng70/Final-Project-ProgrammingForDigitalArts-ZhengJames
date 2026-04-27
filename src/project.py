@@ -111,9 +111,10 @@ class Ball():
         if self.ball.colliderect(self.player.shape):
             # If the color of player does not match with the ball, kills the player.
             if self.is_pink == True and self.player.change_color == -1:
-                print("Dead")
+                self.gameover = True
             elif self.is_blue == True and self.player.change_color == 1:
-                print("Dead2")
+                self.gameover = True
+
             if self.is_pink == True:
                 self.is_pink = False
                 self.is_blue = True
