@@ -151,6 +151,7 @@ class Ball():
             self.speed_y = 15
             self.is_blue = False
             self.is_pink = True
+            print("reset")
 
 # Blocks
 class Blocks():
