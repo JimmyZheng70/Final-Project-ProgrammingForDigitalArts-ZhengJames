@@ -256,7 +256,7 @@ def main():
         if game_over == True:
             gameover_font = pygame.font.SysFont(None, 80)
             gameover_text = gameover_font.render("GAME OVER\nPress 'r' to Restart", True, (255, 0, 0))
-            screen.blit(gameover_text, (screen.get_width()//2, screen.get_height()//2))
+            screen.blit(gameover_text, (screen.get_width()//2, screen.get_height()//2)) # Fix Position
 
         pygame.display.update()
 
