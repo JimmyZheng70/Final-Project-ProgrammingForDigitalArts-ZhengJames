@@ -144,14 +144,14 @@ class Ball():
         return score
     
     def reset(self):
-        self.game_over = False
-        self.gameover = False
-        self.ball.x = 350
-        self.ball.y = 630
-        self.speed_x = 15
-        self.speed_y = 15
-        self.is_blue = False
-        self.is_pink = True
+        if self.gameover:
+            self.gameover = False
+            self.ball.x = 350
+            self.ball.y = 630
+            self.speed_x = 15
+            self.speed_y = 15
+            self.is_blue = False
+            self.is_pink = True
 
 # Blocks
 class Blocks():
