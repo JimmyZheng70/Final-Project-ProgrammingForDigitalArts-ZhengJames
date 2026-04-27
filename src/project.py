@@ -155,6 +155,7 @@ class Ball():
             self.speed_y = 15
             self.is_blue = False
             self.is_pink = True
+            self.score -= self.score
             print("reset")
 
 # Blocks
@@ -237,6 +238,7 @@ def main():
                 if game_over and event.key == pygame.K_r:
                     game_over = False
                     change_color = 1
+                    score -= score
                     ball.reset()
                     player.reset()
                     # Also Reset the Player's Position
