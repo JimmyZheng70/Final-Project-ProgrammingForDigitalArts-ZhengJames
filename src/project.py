@@ -1,8 +1,10 @@
 import pygame
-# TODO: Gain points when destroying the ball
-# Set up death if the ball goes out of bounds under the player
-# Make a color switch of the ball whenever the ball hits the player
-# Make players switch their colors input
+# TODO: 
+# Have a way for the ball and the player must match colors to be hit, and if not, it leads to death.
+# Have a scoreboard ui.
+# Game over screen and option to restart.
+# When restarting, resets the scoreboard and the blocks.
+# Pause menu
 # Resize the ball and player to match the large screen
 # Make bounce of player more interesting
 
