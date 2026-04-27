@@ -118,12 +118,7 @@ class Ball():
             elif self.is_blue == True and self.player.change_color == 1:
                 self.gameover = True
 
-            if self.is_pink == True:
-                self.is_pink = False
-                self.is_blue = True
-            elif self.is_blue == True:
-                self.is_blue = False
-                self.is_pink = True
+            self.color_switch()
             self.speed_y *= -1
 
         # Checks collision with Blocks
@@ -136,6 +131,13 @@ class Ball():
         # Ball Movement Calculations
         self.ball.x -= self.speed_x
         self.ball.y -= self.speed_y
+    def color_switch(self):
+        if self.is_pink == True:
+            self.is_pink = False
+            self.is_blue = True
+        elif self.is_blue == True:
+            self.is_blue = False
+            self.is_pink = True
 
     # Drawing the Ball on the screen
     def draw(self):
