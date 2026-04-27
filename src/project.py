@@ -231,6 +231,7 @@ def main():
             
             if event.type == pygame.KEYDOWN:
                 if game_over and event.key == pygame.K_r:
+                    game_over = False
                     ball.reset()
                     # Also Reset the Player's Position
 
