@@ -56,7 +56,9 @@ class Player():
     def draw(self):
         pygame.draw.rect(self.screen, self.color, self.shape)
 
-    def reset():
+    def reset(self):
+        self.shape.x = self.x
+        self.change_color = 1
 
 # Ball
 class Ball():
