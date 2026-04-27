@@ -103,10 +103,13 @@ class Ball():
         # If it hits the wall, bounces out.
         if self.ball.left < 0:
             self.speed_x *= -1
+            self.color_switch()
         elif self.ball.right > self.screen.get_width():
             self.speed_x *= -1
+            self.color_switch()
         elif self.ball.top < 0:
             self.speed_y *= -1
+            self.color_switch()
         elif self.ball.bottom > self.screen.get_height():
             self.gameover = True
         
@@ -123,6 +126,7 @@ class Ball():
 
         # Checks collision with Blocks
         for block in self.block.block[:]:
+            self.color_switch()
             if self.ball.colliderect(block):
                 self.speed_y *= -1
                 self.block.block.remove(block)
