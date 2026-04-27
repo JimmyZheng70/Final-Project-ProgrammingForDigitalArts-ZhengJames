@@ -1,9 +1,8 @@
 import pygame
 # TODO: 
-# Have a way for the ball and the player must match colors to be hit, and if not, it leads to death.
 # Have a scoreboard ui.
 # Game over screen and option to restart.
-# When restarting, resets the scoreboard and the blocks.
+# When restarting, resets the scoreboard and the blocks, and the Player Position as well
 # Pause menu
 # Resize the ball and player to match the large screen
 # Make bounce of player more interesting
