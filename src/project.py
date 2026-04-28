@@ -255,6 +255,10 @@ def main():
                     block.reset()
                     # Also Reset the Player's Position
 
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_p:
+                    print("Pause")
+
         # Hold Key Down
         # Movement
         key = pygame.key.get_pressed()
