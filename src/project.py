@@ -256,7 +256,7 @@ def main():
                     # Also Reset the Player's Position
 
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_p:
+                if event.key == pygame.K_p and game_over == False:
                     print("Pause")
 
         # Hold Key Down
