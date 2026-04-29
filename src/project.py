@@ -173,7 +173,8 @@ class Ball():
             print("reset")
     
     def pause(self):
-        pass
+        self.speed_x = 0
+        self.speed_y = 0
 
     def unpause(self):
         pass
@@ -274,6 +275,7 @@ def main():
                 if event.key == pygame.K_p and game_over == False:
                     if pause == False:
                         pause = True
+                        ball.pause()
                         print("Paused")
                     else:
                         pause = False
