@@ -171,6 +171,13 @@ class Ball():
             self.is_pink = True
             self.score -= self.score
             print("reset")
+    
+    def pause(self):
+        pass
+
+    def unpause(self):
+        pass
+    
 
 # Blocks
 class Blocks():
