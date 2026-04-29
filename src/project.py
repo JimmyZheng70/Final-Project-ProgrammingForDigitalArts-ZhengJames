@@ -65,9 +65,9 @@ class Ball():
     def __init__(self, x, y, screen, player, block, pink=(255, 0, 255), blue=(15, 10, 255)):
         # Ball Measurements
         self.radius = 13
-        self.speed_x = 25 # Speed of Ball in X directions
-        self.speed_y = 25 # Speed of Ball in Y directions
-        self.max_speed = 25
+        self.speed_x = 20 # Speed of Ball in X directions
+        self.speed_y = 20 # Speed of Ball in Y directions
+        self.max_speed = 20
         self.direction = 0 # Direction of the ball moving
         self.color = None # Color of ball, future code will need to chnage the color
         self.pink = pink
@@ -162,8 +162,8 @@ class Ball():
             self.gameover = False
             self.ball.x = 350
             self.ball.y = 630
-            self.speed_x = 15
-            self.speed_y = 15
+            self.speed_x = self.max_speed
+            self.speed_y = self.max_speed
             self.is_blue = False
             self.is_pink = True
             self.score -= self.score
