@@ -238,6 +238,7 @@ def main():
     change_color = 1
     game_over = False
     score = 0
+    pause = False
     # Running the Game
     while running:
         screen.fill((0, 0, 0)) # Fills the game as black background
