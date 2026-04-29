@@ -272,24 +272,18 @@ def main():
                 is_fullscreen = False
                 screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE) # Fix later
             
-            # Change Player colors
+            # Player Inputs
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_SPACE and pause == False:
+                if event.key == pygame.K_SPACE and pause == False: # Change Player colors
                     change_color *= -1
-            
-            # Reset Game When Player Dies
-            if event.type == pygame.KEYDOWN:
-                if game_over and event.key == pygame.K_r:
+                elif game_over and event.key == pygame.K_r: # Reset Game if player is dead
                     game_over = False
                     change_color = 1
                     score -= score
                     ball.reset()
                     player.reset()
                     block.reset()
-
-            # Pause & Unpause the game
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_p and game_over == False:
+                elif event.key == pygame.K_p and game_over == False: # Pause game
                     if pause == False:
                         pause = True
                         ball.pause()
