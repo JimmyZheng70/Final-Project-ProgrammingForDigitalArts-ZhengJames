@@ -65,8 +65,9 @@ class Ball():
     def __init__(self, x, y, screen, player, block, pink=(255, 0, 255), blue=(15, 10, 255)):
         # Ball Measurements
         self.radius = 13
-        self.speed_x = 15 # Speed of Ball in X directions
-        self.speed_y = 15 # Speed of Ball in Y directions
+        self.speed_x = 25 # Speed of Ball in X directions
+        self.speed_y = 25 # Speed of Ball in Y directions
+        self.max_speed = 25
         self.direction = 0 # Direction of the ball moving
         self.color = None # Color of ball, future code will need to chnage the color
         self.pink = pink
@@ -124,8 +125,8 @@ class Ball():
             self.color_switch()
             self.speed_y *= -1
             self.speed_x += self.player.direction
-            if self.speed_x > 15:
-                self.speed_x = 15
+            if self.speed_x > self.max_speed:
+                self.speed_x = self.max_speed
 
         # Checks collision with Blocks
         for block in self.block.block[:]:
