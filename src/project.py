@@ -239,7 +239,7 @@ def main():
     block = Blocks(screen)
     ball = Ball(350, 630, screen, player, block)
 
-    pause_font = pygame.font.SysFont(None, 250)
+    pause_font = pygame.font.SysFont(None, 150)
     pause_text = pause_font.render("PAUSE", True, (0, 255, 0))
 
     is_fullscreen = False
