@@ -282,10 +282,10 @@ def main():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_p and game_over == False:
                     if pause == False:
+                        screen.blit(pause_text, (screen.get_width()//2, screen.get_height()//2))
                         pause = True
                         ball.pause()
                         print("Paused")
-                        screen.blit(pause_text, (screen.get_width(), screen.get_height()))
                     else:
                         pause = False
                         ball.unpause()
