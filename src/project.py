@@ -175,12 +175,14 @@ class Ball():
             print("reset")
     
     def pause(self):
+        self.origin_speed_x = self.speed_x
+        self.origin_speed_y = self.speed_y
         self.speed_x = 0
         self.speed_y = 0
 
     def unpause(self):
-        self.speed_x = self.max_speed
-        self.speed_y = self.max_speed
+        self.speed_x = self.origin_speed_x
+        self.speed_y = self.origin_speed_y
     
 
 # Blocks
