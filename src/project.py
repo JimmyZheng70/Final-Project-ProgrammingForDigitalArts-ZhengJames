@@ -239,6 +239,9 @@ def main():
     block = Blocks(screen)
     ball = Ball(350, 630, screen, player, block)
 
+    gameover_font = pygame.font.SysFont(None, 80)
+    gameover_text = gameover_font.render("GAME OVER\nPress 'r' to Restart", True, (255, 0, 0))
+    
     pause_font = pygame.font.SysFont(None, 150)
     pause_text = pause_font.render("PAUSE", True, (0, 255, 0))
 
@@ -315,8 +318,6 @@ def main():
         screen.blit(text, (screen.get_width()//2+250, screen.get_height()//1.2+90))
 
         if game_over == True:
-            gameover_font = pygame.font.SysFont(None, 80)
-            gameover_text = gameover_font.render("GAME OVER\nPress 'r' to Restart", True, (255, 0, 0))
             screen.blit(gameover_text, (screen.get_width()//2, screen.get_height()//2)) # Fix Position
         
         if pause == True:
