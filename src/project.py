@@ -257,7 +257,7 @@ def main():
             
             # Change Player colors
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_SPACE:
+                if event.key == pygame.K_SPACE and pause == False:
                     change_color *= -1
             
             if event.type == pygame.KEYDOWN:
