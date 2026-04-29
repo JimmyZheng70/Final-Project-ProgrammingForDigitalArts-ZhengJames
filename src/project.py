@@ -123,6 +123,7 @@ class Ball():
 
             self.color_switch()
             self.speed_y *= -1
+            self.speed_x += 15
 
         # Checks collision with Blocks
         for block in self.block.block[:]:
