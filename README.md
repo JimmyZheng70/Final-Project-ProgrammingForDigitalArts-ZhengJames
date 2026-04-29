@@ -20,4 +20,8 @@ Blocks
 
 Color switching, 
 
+Pause originally was going to stop in each of the classes, but decided to use boolean True/False for the player input and grabbing the pause methods from the Ball's Movement.
+
+Reset Game
+
 The game also allows to resize the screen
