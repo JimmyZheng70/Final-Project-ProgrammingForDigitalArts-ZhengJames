@@ -60,9 +60,6 @@ class Player():
         self.shape.x = self.x
         self.change_color = 1
 
-    def pause(self):
-        
-
 # Ball
 class Ball():
     def __init__(self, x, y, screen, player, block, pink=(255, 0, 255), blue=(15, 10, 255)):
