@@ -1,11 +1,6 @@
 import pygame
 # TODO: 
-# Have a scoreboard ui.
-# Game over screen and option to restart.
-# When restarting, resets the scoreboard and the blocks, and the Player Position as well
-# Pause menu
 # Resize the ball and player to match the large screen
-# Make bounce of player more interesting
 
 # Player
 class Player():
@@ -29,6 +24,7 @@ class Player():
         self.movement(direction)
         self.draw()
 
+    # Switches player's color
     def player_color(self, player_color=1):
         self.change_color = player_color
         if self.change_color == 1:
@@ -56,6 +52,7 @@ class Player():
     def draw(self):
         pygame.draw.rect(self.screen, self.color, self.shape)
 
+    # Reset Player's position and color
     def reset(self):
         self.shape.x = self.x
         self.change_color = 1
@@ -68,8 +65,8 @@ class Ball():
         self.speed_x = 20 # Speed of Ball in X directions
         self.speed_y = 20 # Speed of Ball in Y directions
         self.max_speed = 20
-        self.origin_speed_x = 0
-        self.origin_speed_y = 0
+        self.origin_speed_x = 0 # Store the original speed of ball, x
+        self.origin_speed_y = 0 # Store the original speed of ball, y
         self.direction = 0 # Direction of the ball moving
         self.color = None # Color of ball, future code will need to chnage the color
         self.pink = pink
@@ -80,11 +77,9 @@ class Ball():
         self.x = x
         self.y = y
         self.ball = pygame.Rect(self.x, self.y, self.radius, self.radius) # The Ball's Shape
-        # Get references from other classes
-        self.player = player
-        self.block = block
+        self.player = player # Referenc to Player class
+        self.block = block # Reference to Block class
         self.score = 0
-        self.scorefont = pygame.font.SysFont(None, 12)
         self.gameover = False
 
     # Update Method to run the Ball
@@ -95,6 +90,7 @@ class Ball():
         self.scoreboard(score=0)
         return self.gameover
 
+    # Setting the Ball to default Pink and siwtches color to blue otherwise
     def ball_color(self):
         if self.is_pink == True:
             self.color = self.pink
@@ -114,10 +110,10 @@ class Ball():
         elif self.ball.top < 0:
             self.speed_y *= -1
             self.color_switch()
-        elif self.ball.bottom > self.screen.get_height():
+        elif self.ball.bottom > self.screen.get_height(): # Game Over if it hits the bottom
             self.gameover = True
         
-        # Bounces off the player if in contact, Color Switch potential later.
+        # Bounces off the player if in contact
         if self.ball.colliderect(self.player.shape):
             # If the color of player does not match with the ball, kills the player.
             if self.is_pink == True and self.player.change_color == -1:
@@ -125,8 +121,9 @@ class Ball():
             elif self.is_blue == True and self.player.change_color == 1:
                 self.gameover = True
             
-            self.color_switch()
+            self.color_switch() # Siwtches color of ball when bounced
 
+            # Enables the ball to feel more different depending on the movement of the pk]layer when colliding.
             if abs(self.ball.bottom - self.player.shape.top) < collision_thresh and self.speed_y < 0:
                 self.speed_y *= -1
                 self.speed_x += self.player.direction
@@ -145,6 +142,7 @@ class Ball():
         self.ball.x -= self.speed_x
         self.ball.y -= self.speed_y
 
+    # Called to switch the color of the Ball
     def color_switch(self):
         if self.is_pink == True:
             self.is_pink = False
@@ -162,6 +160,7 @@ class Ball():
         score = self.score
         return score
     
+    # Reset the Ball and the scoreboard
     def reset(self):
         if self.gameover:
             self.gameover = False
@@ -172,14 +171,15 @@ class Ball():
             self.is_blue = False
             self.is_pink = True
             self.score -= self.score
-            print("reset")
     
+    # Stop the movement of the ball, and also store the data which direction the ball was going
     def pause(self):
         self.origin_speed_x = self.speed_x
         self.origin_speed_y = self.speed_y
         self.speed_x = 0
         self.speed_y = 0
 
+    # Return to original direction and speed of the ball
     def unpause(self):
         self.speed_x = self.origin_speed_x
         self.speed_y = self.origin_speed_y
@@ -217,6 +217,7 @@ class Blocks():
         for block in self.block:
             pygame.draw.rect(self.screen, self.color, block)
     
+    # Reset blocks
     def reset(self):
         self.block = []
         self.make_block()
@@ -239,18 +240,22 @@ def main():
     block = Blocks(screen)
     ball = Ball(350, 630, screen, player, block)
 
+    # Gameover text/font
     gameover_font = pygame.font.SysFont(None, 80)
     gameover_text = gameover_font.render("GAME OVER\nPress 'r' to Restart", True, (255, 0, 0))
     
+    # Pause Text/Font
     pause_font = pygame.font.SysFont(None, 150)
     pause_text = pause_font.render("PAUSE", True, (0, 255, 0))
 
+    # Variables
     is_fullscreen = False
     running = True
     change_color = 1
     game_over = False
     score = 0
     pause = False
+
     # Running the Game
     while running:
         screen.fill((0, 0, 0)) # Fills the game as black background
@@ -272,6 +277,7 @@ def main():
                 if event.key == pygame.K_SPACE and pause == False:
                     change_color *= -1
             
+            # Reset Game When Player Dies
             if event.type == pygame.KEYDOWN:
                 if game_over and event.key == pygame.K_r:
                     game_over = False
@@ -282,16 +288,15 @@ def main():
                     block.reset()
                     # Also Reset the Player's Position
 
+            # Pause & Unpause the game
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_p and game_over == False:
                     if pause == False:
                         pause = True
                         ball.pause()
-                        print("Paused")
                     else:
                         pause = False
                         ball.unpause()
-                        print("Continue")
 
         # Hold Key Down
         # Movement
@@ -311,15 +316,18 @@ def main():
         else:
             player.draw()
 
-        block.update()
+        block.update() # Updates the blocks
 
+        # ScoreBoard UI
         font = pygame.font.SysFont(None, 30)
         text = font.render("Score: " + str(score), True, (0, 255, 0))
         screen.blit(text, (screen.get_width()//2+250, screen.get_height()//1.2+90))
 
+        # Game Over UI
         if game_over == True:
             screen.blit(gameover_text, (screen.get_width()//2, screen.get_height()//2)) # Fix Position
         
+        # Pause UI
         if pause == True:
             screen.blit(pause_text, (screen.get_width()//2, screen.get_height()//2))
 
