@@ -286,7 +286,6 @@ def main():
                     ball.reset()
                     player.reset()
                     block.reset()
-                    # Also Reset the Player's Position
 
             # Pause & Unpause the game
             if event.type == pygame.KEYDOWN:
