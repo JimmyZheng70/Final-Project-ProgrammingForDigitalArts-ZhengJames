@@ -121,12 +121,14 @@ class Ball():
                 self.gameover = True
             elif self.is_blue == True and self.player.change_color == 1:
                 self.gameover = True
-
+            
             self.color_switch()
-            self.speed_y *= -1
-            self.speed_x += self.player.direction
-            if self.speed_x > self.max_speed:
-                self.speed_x = self.max_speed
+
+            if abs(self.rect.bottom - self.player.shape.top) < 
+                self.speed_y *= -1
+                self.speed_x += self.player.direction
+                if self.speed_x > self.max_speed:
+                    self.speed_x = self.max_speed
 
         # Checks collision with Blocks
         for block in self.block.block[:]:
