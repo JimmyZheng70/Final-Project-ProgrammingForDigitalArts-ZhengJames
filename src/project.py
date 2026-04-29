@@ -177,7 +177,8 @@ class Ball():
         self.speed_y = 0
 
     def unpause(self):
-        pass
+        self.speed_x = self.max_speed
+        self.speed_y = self.max_speed
     
 
 # Blocks
@@ -279,6 +280,7 @@ def main():
                         print("Paused")
                     else:
                         pause = False
+                        ball.unpause()
                         print("Continue")
 
         # Hold Key Down
