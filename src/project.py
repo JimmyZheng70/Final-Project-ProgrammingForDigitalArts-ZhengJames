@@ -101,6 +101,7 @@ class Ball():
 
     # Movement of the Ball
     def movement(self):
+        collision_thresh = 7
         # If it hits the wall, bounces out.
         if self.ball.left < 0:
             self.speed_x *= -1
