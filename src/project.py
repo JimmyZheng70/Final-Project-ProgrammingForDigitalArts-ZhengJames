@@ -125,7 +125,7 @@ class Ball():
             
             self.color_switch()
 
-            if abs(self.rect.bottom - self.player.shape.top) < 
+            if abs(self.rect.bottom - self.player.shape.top) < collision_thresh:
                 self.speed_y *= -1
                 self.speed_x += self.player.direction
                 if self.speed_x > self.max_speed:
