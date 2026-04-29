@@ -239,6 +239,9 @@ def main():
     block = Blocks(screen)
     ball = Ball(350, 630, screen, player, block)
 
+    pause_font = pygame.font.SysFont(None, 80)
+    pause_text = gameover_font.render("PAUSE", True, (0, 255, 0))
+
     is_fullscreen = False
     running = True
     change_color = 1
