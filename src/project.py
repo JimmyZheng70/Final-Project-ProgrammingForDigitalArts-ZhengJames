@@ -68,6 +68,8 @@ class Ball():
         self.speed_x = 20 # Speed of Ball in X directions
         self.speed_y = 20 # Speed of Ball in Y directions
         self.max_speed = 20
+        self.origin_speed_x = 0
+        self.origin_speed_y = 0
         self.direction = 0 # Direction of the ball moving
         self.color = None # Color of ball, future code will need to chnage the color
         self.pink = pink
