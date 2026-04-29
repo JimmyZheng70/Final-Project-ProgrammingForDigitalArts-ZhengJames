@@ -282,7 +282,6 @@ def main():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_p and game_over == False:
                     if pause == False:
-                        screen.blit(pause_text, (screen.get_width()//2, screen.get_height()//2))
                         pause = True
                         ball.pause()
                         print("Paused")
@@ -319,6 +318,9 @@ def main():
             gameover_font = pygame.font.SysFont(None, 80)
             gameover_text = gameover_font.render("GAME OVER\nPress 'r' to Restart", True, (255, 0, 0))
             screen.blit(gameover_text, (screen.get_width()//2, screen.get_height()//2)) # Fix Position
+        
+        if pause == True:
+            screen.blit(pause_text, (screen.get_width()//2, screen.get_height()//2))
 
         pygame.display.update()
 
