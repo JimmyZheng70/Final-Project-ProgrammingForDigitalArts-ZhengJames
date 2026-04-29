@@ -272,7 +272,12 @@ def main():
 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_p and game_over == False:
-                    print("Pause")
+                    if pause == False:
+                        pause = True
+                        print("Paused")
+                    else:
+                        pause = False
+                        print("Continue")
 
         # Hold Key Down
         # Movement
