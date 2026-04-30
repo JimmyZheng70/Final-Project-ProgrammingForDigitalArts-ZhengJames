@@ -59,7 +59,7 @@ class Player():
 
 # Ball
 class Ball():
-    def __init__(self, x, y, screen, player, block, pink=(255, 0, 255), blue=(15, 10, 255)):
+    def __init__(self, x, y, screen, player, block, max_score=0, pink=(255, 0, 255), blue=(15, 10, 255)):
         # Ball Measurements
         self.radius = 13
         self.speed_x = 20 # Speed of Ball in X directions
@@ -80,6 +80,7 @@ class Ball():
         self.player = player # Referenc to Player class
         self.block = block # Reference to Block class
         self.score = 0
+        self.max_score = max_score
         self.gameover = False
 
     # Update Method to run the Ball
@@ -137,6 +138,7 @@ class Ball():
                 self.speed_y *= -1
                 self.block.block.remove(block)
                 self.score += 1 # Add points for score
+                self.max_score += 1
 
         # Ball Movement Calculations
         self.ball.x -= self.speed_x
@@ -330,8 +332,6 @@ def main():
         # Pause UI
         if pause == True:
             screen.blit(pause_text, (screen.get_width()//2, screen.get_height()//2))
-
-        max_score_block = score
 
         if max_score_block == 28:
             print("Next Level")
