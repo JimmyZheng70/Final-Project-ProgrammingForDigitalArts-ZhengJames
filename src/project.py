@@ -137,8 +137,8 @@ class Ball():
                 self.color_switch()
                 self.speed_y *= -1
                 self.block.block.remove(block)
-                self.score += 1 # Add points for score
-                self.max_score += 1
+                self.score += 10 # Add points for score
+                self.max_score += 10
 
         # Ball Movement Calculations
         self.ball.x -= self.speed_x
