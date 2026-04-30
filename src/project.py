@@ -333,9 +333,12 @@ def main():
         if pause == True:
             screen.blit(pause_text, (screen.get_width()//2, screen.get_height()//2))
 
+        max_score_block = ball.max_score
+
         if max_score_block == 28:
             print("Next Level")
-            max_score_block = 0
+            print(max_score_block)
+            ball.max_score = 0
 
         pygame.display.update()
 
