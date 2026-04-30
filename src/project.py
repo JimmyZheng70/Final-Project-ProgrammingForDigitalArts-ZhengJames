@@ -312,9 +312,9 @@ def main():
         block.update() # Updates the blocks
 
         # ScoreBoard UI
-        font = pygame.font.SysFont(None, 30)
-        text = font.render("Score: " + str(score), True, (0, 255, 0))
-        screen.blit(text, (screen.get_width()//2+250, screen.get_height()//1.2+90))
+        score_font = pygame.font.SysFont(None, 30)
+        score_text = score_font.render("Score: " + str(score), True, (0, 255, 0))
+        screen.blit(score_text, (screen.get_width()//2+250, screen.get_height()//1.2+90))
 
         # Game Over UI
         if game_over == True:
