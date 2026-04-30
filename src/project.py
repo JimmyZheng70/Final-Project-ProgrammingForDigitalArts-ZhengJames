@@ -274,6 +274,9 @@ def main():
             elif event.type == pygame.VIDEORESIZE and is_fullscreen == False:
                 is_fullscreen = False
                 screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE) # Fix later
+                player.screen = screen
+                ball.screen = screen
+                block.screen = screen
             
             # Player Inputs
             if event.type == pygame.KEYDOWN:
