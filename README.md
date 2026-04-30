@@ -24,4 +24,4 @@ Pause originally was going to stop in each of the classes, but decided to use bo
 
 Reset Game
 
-The game also allows to resize the screen
+Originally I had this feature where the user can resize the window of the game, but in the end I decided to remove it due to complications with adjusting the size of the other objects such as the player.
