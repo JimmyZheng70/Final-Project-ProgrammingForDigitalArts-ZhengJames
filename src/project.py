@@ -330,6 +330,9 @@ def main():
         if pause == True:
             screen.blit(pause_text, (screen.get_width()//2, screen.get_height()//2))
 
+        if score == 28:
+            pass
+
         pygame.display.update()
 
         dt = clock.tick(20)
