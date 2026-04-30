@@ -331,7 +331,7 @@ def main():
             screen.blit(pause_text, (screen.get_width()//2, screen.get_height()//2))
 
         if score == 28:
-            pass
+            print("Next Level")
 
         pygame.display.update()
 
