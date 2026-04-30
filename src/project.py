@@ -335,7 +335,7 @@ def main():
 
         max_score_block = ball.max_score
 
-        if max_score_block >= 28:
+        if max_score_block >= 280:
             print("Next Level")
             print(max_score_block)
             ball.max_score = 0
