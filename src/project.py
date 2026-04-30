@@ -268,6 +268,9 @@ def main():
                 is_fullscreen = True
                 # If chanegd to fullsize, then also adjust the screens for the Ball, Blocks, and Player
                 screen = pygame.display.set_mode(fullscreen, pygame.RESIZABLE)
+                player.screen = screen
+                ball.screen = screen
+                block.screen = screen
             elif event.type == pygame.VIDEORESIZE and is_fullscreen == False:
                 is_fullscreen = False
                 screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE) # Fix later
