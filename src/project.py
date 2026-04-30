@@ -254,6 +254,7 @@ def main():
     change_color = 1
     game_over = False
     score = 0
+    max_score_block = 0
     pause = False
 
     # Running the Game
@@ -330,8 +331,11 @@ def main():
         if pause == True:
             screen.blit(pause_text, (screen.get_width()//2, screen.get_height()//2))
 
-        if score == 28:
+        max_score_block = score
+
+        if max_score_block == 28:
             print("Next Level")
+            max_score_block = 0
 
         pygame.display.update()
 
