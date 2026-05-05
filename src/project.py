@@ -268,6 +268,7 @@ def main():
     change_color = 1
     game_over = False
     score = 0
+    level = 1
     max_score_block = 0
     pause = False
 
@@ -336,6 +337,11 @@ def main():
         score_font = pygame.font.SysFont(None, 30)
         score_text = score_font.render("Score: " + str(score), True, (0, 255, 0))
         screen.blit(score_text, (screen.get_width()//2+250, screen.get_height()//1.2+90))
+
+        # Level Number UI
+        level_font = pygame.font.SysFont(None, 30)
+        level_text = level_font.render("Score: " + str(level), True, (0, 255, 0))
+        screen.blit(level_text, (screen.get_width()//2-250, screen.get_height()//1.2+90))
 
         # Game Over UI
         if game_over == True:
