@@ -242,6 +242,7 @@ class Sound():
 def main():
     pygame.init()
     pygame.display.set_caption("Final Project")
+    pygame.mixer.init()
 
     clock = pygame.time.Clock()
     dt = 0
