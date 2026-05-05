@@ -341,7 +341,7 @@ def main():
 
         # Level Number UI
         level_font = pygame.font.SysFont(None, 30)
-        level_text = level_font.render("Score: " + str(level), True, (0, 255, 0))
+        level_text = level_font.render("Level " + str(level), True, (0, 255, 0))
         screen.blit(level_text, (screen.get_width()//2-250, screen.get_height()//1.2+90))
 
         # Game Over UI
