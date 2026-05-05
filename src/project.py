@@ -331,7 +331,7 @@ def main():
         
         # Pause UI
         if pause == True:
-            screen.blit(pause_text, (screen.get_width()//2, screen.get_height()//2))
+            screen.blit(pause_text, (screen.get_width()//2-176, screen.get_height()//2))
 
         max_score_block = ball.max_score
 
