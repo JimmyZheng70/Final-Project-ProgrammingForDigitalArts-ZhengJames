@@ -237,8 +237,9 @@ class Blocks():
 
 # To Play Sound
 class Sound():
-    def __init__(self):
-        pass
+    def __init__(self, sound=None):
+        self.sound_name = sound
+        
 # MAIN
 def main():
     pygame.init()
