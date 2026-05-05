@@ -361,6 +361,7 @@ def main():
             ball.next_level()
             block.reset()
             player.reset()
+            level += 1
 
         pygame.display.update()
 
