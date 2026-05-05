@@ -353,6 +353,8 @@ def main():
             print(max_score_block)
             ball.max_score = 0
             ball.next_level()
+            block.reset()
+            player.reset()
 
         pygame.display.update()
 
