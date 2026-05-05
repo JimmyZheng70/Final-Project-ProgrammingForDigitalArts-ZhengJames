@@ -301,12 +301,14 @@ def main():
                 elif game_over and event.key == pygame.K_r: # Reset Game if player is dead
                     game_over = False
                     change_color = 1
-                    score -= score
+                    score = 0
                     max_score_block -= max_score_block
                     level = 1
                     ball.reset()
                     player.reset()
                     block.reset()
+                    print(max_score_block)
+                    print(score)
                 elif event.key == pygame.K_p and game_over == False: # Pause game
                     if pause == False:
                         pause = True
