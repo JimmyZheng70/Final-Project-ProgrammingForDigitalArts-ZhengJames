@@ -302,6 +302,7 @@ def main():
                     game_over = False
                     change_color = 1
                     score -= score
+                    level = 1
                     ball.reset()
                     player.reset()
                     block.reset()
