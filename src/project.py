@@ -239,6 +239,9 @@ class Blocks():
 class Sound():
     def __init__(self, sound=None):
         self.sound_name = sound
+
+    def play_sfx(self, sound=None):
+        
         
 # MAIN
 def main():
