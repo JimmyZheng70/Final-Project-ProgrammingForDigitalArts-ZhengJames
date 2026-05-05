@@ -244,7 +244,11 @@ def main():
 
     # Gameover text/font
     gameover_font = pygame.font.SysFont(None, 80)
-    gameover_text = gameover_font.render("GAME OVER\nPress 'r' to Restart", True, (255, 0, 0))
+    gameover_text = gameover_font.render("GAME OVER", True, (255, 0, 0))
+
+    # Restart text/font
+    restart_font = pygame.font.SysFont(None, 40)
+    restart_text = restart_font.render("Press 'r' to Restart", True, (255, 0, 0))
     
     # Pause Text/Font
     pause_font = pygame.font.SysFont(None, 150)
@@ -328,6 +332,7 @@ def main():
         # Game Over UI
         if game_over == True:
             screen.blit(gameover_text, (screen.get_width()//2-176, screen.get_height()//2)) # Fix Position
+            screen.blit(restart_text, (screen.get_width()//2-176, screen.get_height()//2))
         
         # Pause UI
         if pause == True:
