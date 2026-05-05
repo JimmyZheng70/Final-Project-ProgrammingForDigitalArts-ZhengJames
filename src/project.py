@@ -327,7 +327,7 @@ def main():
 
         # Game Over UI
         if game_over == True:
-            screen.blit(gameover_text, (screen.get_width()//2, screen.get_height()//2)) # Fix Position
+            screen.blit(gameover_text, (screen.get_width()//2-176, screen.get_height()//2)) # Fix Position
         
         # Pause UI
         if pause == True:
