@@ -173,6 +173,7 @@ class Ball():
             self.is_blue = False
             self.is_pink = True
             self.score -= self.score
+            self.max_score -= self.max_score
     
     # Stop the movement of the ball, and also store the data which direction the ball was going
     def pause(self):
@@ -194,6 +195,7 @@ class Ball():
         self.speed_y = self.max_speed
         self.is_blue = False
         self.is_pink = True
+        self.max_score -= self.max_score
 
 # Blocks
 class Blocks():
