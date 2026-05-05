@@ -269,7 +269,7 @@ def main():
     pause_text = pause_font.render("PAUSE", True, (0, 255, 0))
 
     # Sound
-    sound = pygame.mixer.Sound('sound.mp3')
+    sound = pygame.mixer.Sound('SwitchColorPlayer.wav')
 
     # Variables
     running = True
