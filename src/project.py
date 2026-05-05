@@ -186,6 +186,14 @@ class Ball():
         self.speed_x = self.origin_speed_x
         self.speed_y = self.origin_speed_y
     
+    # Starts New level, resetting ball to origin
+    def next_level(self):
+        self.ball.x = 350
+        self.ball.y = 630
+        self.speed_x = self.max_speed
+        self.speed_y = self.max_speed
+        self.is_blue = False
+        self.is_pink = True
 
 # Blocks
 class Blocks():
@@ -344,6 +352,7 @@ def main():
             print("Next Level")
             print(max_score_block)
             ball.max_score = 0
+            ball.next_level()
 
         pygame.display.update()
 
