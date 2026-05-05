@@ -268,7 +268,6 @@ def main():
     pause_text = pause_font.render("PAUSE", True, (0, 255, 0))
 
     # Variables
-    is_fullscreen = False
     running = True
     change_color = 1
     game_over = False
