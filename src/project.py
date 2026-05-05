@@ -332,7 +332,7 @@ def main():
         # Game Over UI
         if game_over == True:
             screen.blit(gameover_text, (screen.get_width()//2-176, screen.get_height()//2)) # Fix Position
-            screen.blit(restart_text, (screen.get_width()//2-176, screen.get_height()//2))
+            screen.blit(restart_text, (screen.get_width()//2-120, screen.get_height()//2+55))
         
         # Pause UI
         if pause == True:
