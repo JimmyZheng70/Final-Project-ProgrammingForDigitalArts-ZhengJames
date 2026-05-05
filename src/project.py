@@ -302,6 +302,7 @@ def main():
                     game_over = False
                     change_color = 1
                     score -= score
+                    max_score_block -= max_score_block
                     level = 1
                     ball.reset()
                     player.reset()
