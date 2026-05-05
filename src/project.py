@@ -10,7 +10,7 @@ class Player():
         self.x = 300
         self.y = screen.get_height() - 40
         self.shape = pygame.Rect(self.x, self.y, self.width, self.height) # Creates the shape of the player
-        self.speed = 20
+        self.speed = 30
         self.direction = 0 # -1 for left and 1 for right
         self.screen = screen # get the screen of the game
         self.color = None # Change later to make it change color
