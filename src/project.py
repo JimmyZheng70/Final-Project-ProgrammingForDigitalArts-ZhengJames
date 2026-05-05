@@ -248,8 +248,7 @@ def main():
 
     # Screens
     smallscreen = (800, 700)
-    fullscreen = (1920, 1080) ## MAY DELETE
-    screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE) ### MAY DELETE
+    screen = pygame.display.set_mode(smallscreen)
 
     # Classes
     player = Player(screen)
@@ -286,19 +285,6 @@ def main():
         for event in pygame.event.get(): # For exiting or resizing the game.
             if event.type == pygame.QUIT:
                 running = False
-            elif event.type == pygame.VIDEORESIZE and is_fullscreen == False: ##### MAY DELETE
-                is_fullscreen = True
-                # If chanegd to fullsize, then also adjust the screens for the Ball, Blocks, and Player
-                screen = pygame.display.set_mode(fullscreen, pygame.RESIZABLE)
-                player.screen = screen
-                ball.screen = screen
-                block.screen = screen
-            elif event.type == pygame.VIDEORESIZE and is_fullscreen == False:
-                is_fullscreen = False
-                screen = pygame.display.set_mode(smallscreen, pygame.RESIZABLE) # Fix later
-                player.screen = screen
-                ball.screen = screen
-                block.screen = screen
             
             # Player Inputs
             if event.type == pygame.KEYDOWN:
