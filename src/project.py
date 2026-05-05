@@ -234,6 +234,10 @@ class Blocks():
         self.block = []
         self.make_block()
 
+# To Play Sound
+class Sound():
+    def __init__(self):
+        pass
 # MAIN
 def main():
     pygame.init()
