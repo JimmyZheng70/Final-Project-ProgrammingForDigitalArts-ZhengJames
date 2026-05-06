@@ -241,7 +241,8 @@ class Sound():
         self.sound_name = sound
 
     def play_sfx(self, sound=None):
-        
+        self.sound = sound
+        self.sound.play()
         
 # MAIN
 def main():
