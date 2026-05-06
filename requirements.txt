@@ -1,2 +1,8 @@
 pygame
+pygame.font
+pyagme.mixer
+pygame.draw
+pygame.display
+pygame.time
+pygame.key
 os
