@@ -263,6 +263,7 @@ def main():
     player = Player(screen)
     block = Blocks(screen)
     ball = Ball(350, 630, screen, player, block)
+    sound = Sound('')
 
     # Gameover text/font
     gameover_font = pygame.font.SysFont(None, 80)
