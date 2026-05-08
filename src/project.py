@@ -136,7 +136,7 @@ class Ball():
         # Checks collision with Blocks
         for block in self.block.block[:]:
             if self.ball.colliderect(block):
-                self.sound.play_sfx('SwitchColorPlayer.wav')
+                ##self.sound.play_sfx('')
                 self.color_switch()
                 self.speed_y *= -1
                 self.block.block.remove(block)
@@ -150,11 +150,11 @@ class Ball():
     # Called to switch the color of the Ball
     def color_switch(self):
         if self.is_pink == True:
-            self.sound.play_sfx('SwitchColorPlayer.wav')
+            ##self.sound.play_sfx('')
             self.is_pink = False
             self.is_blue = True
         elif self.is_blue == True:
-            self.sound.play_sfx('SwitchColorPlayer.wav')
+            ##self.sound.play_sfx('')
             self.is_blue = False
             self.is_pink = True
 
