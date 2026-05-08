@@ -136,6 +136,7 @@ class Ball():
         # Checks collision with Blocks
         for block in self.block.block[:]:
             if self.ball.colliderect(block):
+                self.sound.play_sfx('SwitchColorPlayer.wav')
                 self.color_switch()
                 self.speed_y *= -1
                 self.block.block.remove(block)
