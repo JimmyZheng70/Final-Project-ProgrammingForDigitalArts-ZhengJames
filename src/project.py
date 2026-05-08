@@ -366,7 +366,7 @@ def main():
         max_score_block = ball.max_score
 
         if max_score_block >= 320:
-            ##sound.play_sfx('')
+            sound.play_sfx('NextLevel.wav')
             ball.max_score = 0
             ball.next_level()
             block.reset()
