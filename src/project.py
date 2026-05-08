@@ -299,7 +299,7 @@ def main():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE and pause == False: # Change Player colors
                     change_color *= -1
-                    sound.play()
+                    sound.play_sfx('SwitchColorPlayer.wav')
                 elif game_over and event.key == pygame.K_r: # Reset Game if player is dead
                     game_over = False
                     change_color = 1
