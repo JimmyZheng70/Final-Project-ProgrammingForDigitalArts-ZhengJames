@@ -238,10 +238,11 @@ class Blocks():
 # To Play Sound
 class Sound():
     pygame.mixer.init()
-    def __init__(self, sound=None):
+    def __init__(self, folder='', sound=''):
         self.sound_name = sound
+        self.folder_path = folder
 
-    def play_sfx(self, sound=None):
+    def play_sfx(self, folder='', sound=''):
         self.sound = sound
         self.sound.play()
         
