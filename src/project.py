@@ -115,6 +115,7 @@ class Ball():
             self.color_switch()
         elif self.ball.bottom > self.screen.get_height(): # Game Over if it hits the bottom
             self.gameover = True
+            self.sound.play_sfx('GameOver.wav')
 
         # Ball Movement Calculations
         self.ball.x -= self.speed_x
@@ -127,8 +128,10 @@ class Ball():
             # If the color of player does not match with the ball, kills the player.
             if self.is_pink == True and self.player.change_color == -1:
                 self.gameover = True
+                self.sound.play_sfx('GameOver.wav')
             elif self.is_blue == True and self.player.change_color == 1:
                 self.gameover = True
+                self.sound.play_sfx('GameOver.wav')
             
             self.color_switch() # Siwtches color of ball when bounced
 
@@ -340,7 +343,6 @@ def main():
             score = ball.scoreboard(score)
         else:
             player.draw()
-            sound.play_sfx('GameOver.wav')
 
         block.update() # Updates the blocks
 
