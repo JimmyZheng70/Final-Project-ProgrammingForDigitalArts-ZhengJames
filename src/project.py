@@ -90,6 +90,7 @@ class Ball():
         self.ball_color()
         self.draw()
         self.movement()
+        self.collision()
         self.scoreboard(score=0)
         return self.gameover
 
@@ -102,7 +103,6 @@ class Ball():
 
     # Movement of the Ball
     def movement(self):
-        collision_thresh = 7
         # If it hits the wall, bounces out.
         if self.ball.left < 0:
             self.speed_x *= -1
@@ -115,8 +115,14 @@ class Ball():
             self.color_switch()
         elif self.ball.bottom > self.screen.get_height(): # Game Over if it hits the bottom
             self.gameover = True
-        
-        # Bounces off the player if in contact
+
+        # Ball Movement Calculations
+        self.ball.x -= self.speed_x
+        self.ball.y -= self.speed_y
+    
+    def collision(self):
+        collision_thresh = 7
+         # Bounces off the player if in contact
         if self.ball.colliderect(self.player.shape):
             # If the color of player does not match with the ball, kills the player.
             if self.is_pink == True and self.player.change_color == -1:
@@ -143,9 +149,6 @@ class Ball():
                 self.score += 10 # Add points for score
                 self.max_score += 10
 
-        # Ball Movement Calculations
-        self.ball.x -= self.speed_x
-        self.ball.y -= self.speed_y
 
     # Called to switch the color of the Ball
     def color_switch(self):
