@@ -236,13 +236,13 @@ class Blocks():
         self.make_block()
 
 # To Play Sound
-class Sound():
-    def __init__(self, sound=pygame.mixer.Sound(None)):
-        self.sound_name = sound
+#class Sound():
+    #def __init__(self, sound=pygame.mixer.Sound(None)):
+        #self.sound_name = sound
 
-    def play_sfx(self, sound=pygame.mixer.Sound(None)):
-        self.sound = sound
-        self.sound.play()
+    #def play_sfx(self, sound=pygame.mixer.Sound(None)):
+        #self.sound = sound
+        #self.sound.play()
         
 # MAIN
 def main():
@@ -275,7 +275,7 @@ def main():
     pause_text = pause_font.render("PAUSE", True, (0, 255, 0))
 
     # Sound
-    sound = pygame.mixer.Sound('SwitchColorPlayer.wav')
+    sound = pygame.mixer.Sound(os.path.join('sfx', 'SwitchColorPlayer.wav'))
 
     # Variables
     running = True
