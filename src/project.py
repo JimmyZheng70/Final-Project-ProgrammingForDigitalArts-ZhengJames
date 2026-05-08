@@ -89,8 +89,8 @@ class Ball():
     def update(self):
         self.ball_color()
         self.draw()
-        self.movement()
         self.collision()
+        self.movement()
         self.scoreboard(score=0)
         return self.gameover
 
