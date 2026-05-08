@@ -142,7 +142,7 @@ class Ball():
         # Checks collision with Blocks
         for block in self.block.block[:]:
             if self.ball.colliderect(block):
-                ##self.sound.play_sfx('')
+                self.sound.play_sfx('BlockHit.wav')
                 self.color_switch()
                 self.speed_y *= -1
                 self.block.block.remove(block)
@@ -153,11 +153,11 @@ class Ball():
     # Called to switch the color of the Ball
     def color_switch(self):
         if self.is_pink == True:
-            ##self.sound.play_sfx('')
+            self.sound.play_sfx('BallSwitchColor.wav')
             self.is_pink = False
             self.is_blue = True
         elif self.is_blue == True:
-            ##self.sound.play_sfx('')
+            self.sound.play_sfx('BallSwitchColor.wav')
             self.is_blue = False
             self.is_pink = True
 
@@ -304,7 +304,7 @@ def main():
                     change_color *= -1
                     sound.play_sfx('SwitchColorPlayer.wav')
                 elif game_over and event.key == pygame.K_r: # Reset Game if player is dead
-                    ##sound.play_sfx('')
+                    sound.play_sfx('Reset.wav')
                     game_over = False
                     change_color = 1
                     score = 0
@@ -355,7 +355,7 @@ def main():
 
         # Game Over UI
         if game_over == True:
-            ##sound.play_sfx('')
+            sound.play_sfx('GameOver.wav')
             screen.blit(gameover_text, (screen.get_width()//2-176, screen.get_height()//2)) # Fix Position
             screen.blit(restart_text, (screen.get_width()//2-120, screen.get_height()//2+55))
         
