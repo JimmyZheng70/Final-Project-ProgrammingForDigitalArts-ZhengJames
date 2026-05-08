@@ -340,6 +340,7 @@ def main():
             score = ball.scoreboard(score)
         else:
             player.draw()
+            sound.play_sfx('GameOver.wav')
 
         block.update() # Updates the blocks
 
@@ -355,7 +356,6 @@ def main():
 
         # Game Over UI
         if game_over == True:
-            sound.play_sfx('GameOver.wav')
             screen.blit(gameover_text, (screen.get_width()//2-176, screen.get_height()//2)) # Fix Position
             screen.blit(restart_text, (screen.get_width()//2-120, screen.get_height()//2+55))
         
