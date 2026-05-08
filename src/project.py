@@ -5,7 +5,7 @@ import os
 
 # Player
 class Player():
-    def __init__(self, screen, pink=(255, 0, 255), blue=(0, 255, 255)):
+    def __init__(self, screen, pink=(220, 0, 220), blue=(0, 220, 220)):
         self.height = 10
         self.width = 100
         self.x = 300
@@ -60,7 +60,7 @@ class Player():
 
 # Ball
 class Ball():
-    def __init__(self, x, y, screen, player, block, sound, max_score=0, pink=(255, 0, 255), blue=(0, 255, 255)):
+    def __init__(self, x, y, screen, player, block, sound, max_score=0, pink=(220, 0, 220), blue=(0, 220, 220)):
         # Ball Measurements
         self.radius = 13
         self.speed_x = 20 # Speed of Ball in X directions
