@@ -24,6 +24,6 @@ Pause originally was going to stop in each of the classes, but decided to use bo
 
 Reset Game
 
-Audio
+To use sound effects, I created a Sound Class, which would access a folder path with all the files name, and play the sound of the file I choose when called, esssentially reusing the sound class to play different types of sound without having to create multiple variables to hold each sound file. I used the pygame.mixer to play the sfx for the game itself. The sfx comes from Chip Tone, which I have used for other projects for making sound effects.
 
 Originally I had this feature where the user can resize the window of the game, but in the end I decided to remove it due to complications with adjusting the size of the other objects such as the player.
