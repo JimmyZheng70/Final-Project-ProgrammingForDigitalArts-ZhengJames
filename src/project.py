@@ -238,12 +238,8 @@ class Blocks():
 # To Play Sound
 class Sound():
     pygame.mixer.init()
-    def __init__(self, folder='sfx', sound=''):
-        self.sound_name = sound
-        self.folder_path = folder
-
-    def play_sfx(self, folder='sfx', sound=''):
-        play = pygame.mixer.Sound(os.path.join(folder, sound))
+    def play_sfx(self, sound=''):
+        play = pygame.mixer.Sound(os.path.join('sfx', sound))
         play.play()
         
 # MAIN
@@ -263,7 +259,7 @@ def main():
     player = Player(screen)
     block = Blocks(screen)
     ball = Ball(350, 630, screen, player, block)
-    sound = Sound('')
+    sound = Sound()
 
     # Gameover text/font
     gameover_font = pygame.font.SysFont(None, 80)
@@ -299,7 +295,7 @@ def main():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE and pause == False: # Change Player colors
                     change_color *= -1
-                    sound.play_sfx('sfx','SwitchColorPlayer.wav')
+                    sound.play_sfx('SwitchColorPlayer.wav')
                 elif game_over and event.key == pygame.K_r: # Reset Game if player is dead
                     game_over = False
                     change_color = 1
