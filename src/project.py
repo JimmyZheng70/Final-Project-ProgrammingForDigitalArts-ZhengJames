@@ -211,7 +211,7 @@ class Blocks():
         self.gap = 8
         self.color = (200, 200, 200)
         self.cols = 4
-        self.rows = 7
+        self.rows = 8
         self.block = [] # The blocks made to put into a list
         self.screen = screen
         self.make_block() # Makes the Block once when run
@@ -362,7 +362,7 @@ def main():
 
         max_score_block = ball.max_score
 
-        if max_score_block >= 280:
+        if max_score_block >= 320:
             ##sound.play_sfx('')
             ball.max_score = 0
             ball.next_level()
