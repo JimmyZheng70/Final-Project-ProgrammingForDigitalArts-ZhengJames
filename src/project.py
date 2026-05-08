@@ -60,7 +60,7 @@ class Player():
 
 # Ball
 class Ball():
-    def __init__(self, x, y, screen, player, block, max_score=0, pink=(255, 0, 255), blue=(15, 10, 255)):
+    def __init__(self, x, y, screen, player, block, sound, max_score=0, pink=(255, 0, 255), blue=(15, 10, 255)):
         # Ball Measurements
         self.radius = 13
         self.speed_x = 20 # Speed of Ball in X directions
@@ -83,6 +83,7 @@ class Ball():
         self.score = 0
         self.max_score = max_score
         self.gameover = False
+        self.sound = sound
 
     # Update Method to run the Ball
     def update(self):
@@ -148,11 +149,11 @@ class Ball():
     # Called to switch the color of the Ball
     def color_switch(self):
         if self.is_pink == True:
-            ##sound.play_sfx('')
+            self.sound.play_sfx('SwitchColorPlayer.wav')
             self.is_pink = False
             self.is_blue = True
         elif self.is_blue == True:
-            ##sound.play_sfx('')
+            self.sound.play_sfx('SwitchColorPlayer.wav')
             self.is_blue = False
             self.is_pink = True
 
@@ -261,7 +262,7 @@ def main():
     sound = Sound()
     player = Player(screen)
     block = Blocks(screen)
-    ball = Ball(350, 630, screen, player, block)
+    ball = Ball(350, 630, screen, player, block, sound)
 
     # Gameover text/font
     gameover_font = pygame.font.SysFont(None, 80)
