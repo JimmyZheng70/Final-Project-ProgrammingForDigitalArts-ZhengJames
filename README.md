@@ -16,7 +16,7 @@ Player's move either left or right by pressing the Left/Right arrow or the A/D k
 
 The Ball, which is coded inside its own class, moves by subtracting the position of its shape to its speed, leading it to more up with the subtraction when starting. For the bounce off the walls, the Ball class compares where it is on screen, and goes to the opposite direction through multiplying with -1, changing the direction, to either left or right for the side walls, and down for the top wall. For the bottom wall, it will instead go through. The ball also checks inside the movement method, as it was the easiest way to check for other objects, if its hits a block, player, or reaches the bottom. If it hits a block, it will destroy the block and gives the point, sending that number into the main class. Also it will bounce off the player, and the bounce direction can be somewhat manipulated by the player's own movement. The ball itself takes in the parameters for the player and blocks class to make the game function easier.
 
-Blocks are created first with through having a nested loop, accounting for the rows and columns of the screen, and will draw out a rectangular shape in each columns, then moving onto rows, doing this 
+Blocks are created first with through having a nested loop, accounting for the rows and columns of the screen, and will draw out a rectangular shape in each columns, then moving onto rows, doing this 4 times in the columns, then  times for the rows.
 
 Color switching, 
 
