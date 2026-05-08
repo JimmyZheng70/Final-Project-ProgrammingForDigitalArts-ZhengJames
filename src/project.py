@@ -236,13 +236,14 @@ class Blocks():
         self.make_block()
 
 # To Play Sound
-#class Sound():
-    #def __init__(self, sound=pygame.mixer.Sound(None)):
-        #self.sound_name = sound
+class Sound():
+    pygame.mixer.init()
+    def __init__(self, sound=None):
+        self.sound_name = sound
 
-    #def play_sfx(self, sound=pygame.mixer.Sound(None)):
-        #self.sound = sound
-        #self.sound.play()
+    def play_sfx(self, sound=None):
+        self.sound = sound
+        self.sound.play()
         
 # MAIN
 def main():
