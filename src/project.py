@@ -310,8 +310,6 @@ def main():
                     ball.reset()
                     player.reset()
                     block.reset()
-                    print(max_score_block)
-                    print(score)
                 elif event.key == pygame.K_p and game_over == False: # Pause game
                     if pause == False:
                         ##sound.play_sfx('')
