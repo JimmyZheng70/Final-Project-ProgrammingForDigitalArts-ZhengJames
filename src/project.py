@@ -317,12 +317,11 @@ def main():
                     player.reset()
                     block.reset()
                 elif event.key == pygame.K_p and game_over == False: # Pause game
+                    sound.play_sfx('Pause.wav')
                     if pause == False:
-                        sound.play_sfx('Pause.wav')
                         pause = True
                         ball.pause()
                     else:
-                        sound.play_sfx('Pause.wav')
                         pause = False
                         ball.unpause()
 
