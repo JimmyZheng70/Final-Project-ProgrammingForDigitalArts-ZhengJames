@@ -258,10 +258,10 @@ def main():
     screen = pygame.display.set_mode(smallscreen)
 
     # Classes
+    sound = Sound()
     player = Player(screen)
     block = Blocks(screen)
     ball = Ball(350, 630, screen, player, block)
-    sound = Sound()
 
     # Gameover text/font
     gameover_font = pygame.font.SysFont(None, 80)
