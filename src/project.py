@@ -148,9 +148,11 @@ class Ball():
     # Called to switch the color of the Ball
     def color_switch(self):
         if self.is_pink == True:
+            ##sound.play_sfx('')
             self.is_pink = False
             self.is_blue = True
         elif self.is_blue == True:
+            ##sound.play_sfx('')
             self.is_blue = False
             self.is_pink = True
 
@@ -297,6 +299,7 @@ def main():
                     change_color *= -1
                     sound.play_sfx('SwitchColorPlayer.wav')
                 elif game_over and event.key == pygame.K_r: # Reset Game if player is dead
+                    ##sound.play_sfx('')
                     game_over = False
                     change_color = 1
                     score = 0
@@ -309,9 +312,11 @@ def main():
                     print(score)
                 elif event.key == pygame.K_p and game_over == False: # Pause game
                     if pause == False:
+                        ##sound.play_sfx('')
                         pause = True
                         ball.pause()
                     else:
+                        ##sound.play_sfx('')
                         pause = False
                         ball.unpause()
 
@@ -357,6 +362,7 @@ def main():
         max_score_block = ball.max_score
 
         if max_score_block >= 280:
+            ##sound.play_sfx('')
             ball.max_score = 0
             ball.next_level()
             block.reset()
