@@ -244,6 +244,7 @@ class Sound():
 
     def play_sfx(self, folder='sfx', sound=''):
         play = pygame.mixer.Sound(os.path.join(folder, sound))
+        play.play()
         
 # MAIN
 def main():
@@ -274,9 +275,6 @@ def main():
     # Pause Text/Font
     pause_font = pygame.font.SysFont(None, 150)
     pause_text = pause_font.render("PAUSE", True, (0, 255, 0))
-
-    # Sound
-    sound = pygame.mixer.Sound(os.path.join('sfx', 'SwitchColorPlayer.wav'))
 
     # Variables
     running = True
