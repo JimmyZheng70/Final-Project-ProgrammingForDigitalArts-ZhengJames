@@ -243,8 +243,7 @@ class Sound():
         self.folder_path = folder
 
     def play_sfx(self, folder='', sound=''):
-        self.sound = sound
-        self.sound.play()
+        play = pygame.mixer.Sound(os.path.join(folder, sound))
         
 # MAIN
 def main():
