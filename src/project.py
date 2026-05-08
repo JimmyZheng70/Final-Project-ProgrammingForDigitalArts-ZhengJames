@@ -209,7 +209,7 @@ class Blocks():
         self.width = 200
         self.height = 35
         self.gap = 8
-        self.color = (255, 255, 255)
+        self.color = (200, 200, 200)
         self.cols = 7
         self.rows = 7
         self.block = [] # The blocks made to put into a list
