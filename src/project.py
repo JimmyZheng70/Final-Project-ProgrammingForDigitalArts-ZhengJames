@@ -1,7 +1,5 @@
 import pygame
 import os
-# TODO: 
-# Resize the ball and player to match the large screen
 
 # Player
 class Player():
@@ -81,7 +79,7 @@ class Ball():
         self.player = player # Referenc to Player class
         self.block = block # Reference to Block class
         self.score = 0
-        self.max_score = max_score
+        self.max_score = max_score # Seperate scoring vairable to store current points and used for checking
         self.gameover = False
         self.sound = sound
 
@@ -121,6 +119,7 @@ class Ball():
         self.ball.x -= self.speed_x
         self.ball.y -= self.speed_y
     
+    # Collision Method for Ball
     def collision(self):
         collision_thresh = 7
          # Bounces off the player if in contact
@@ -364,8 +363,10 @@ def main():
         if pause == True:
             screen.blit(pause_text, (screen.get_width()//2-176, screen.get_height()//2))
 
+        # Update the max_score variable with the max score inside of Ball class
         max_score_block = ball.max_score
 
+        # Transition to next level.
         if max_score_block >= 320:
             sound.play_sfx('NextLevel.wav')
             ball.max_score = 0
