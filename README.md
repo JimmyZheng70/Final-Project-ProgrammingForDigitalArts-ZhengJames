@@ -1,13 +1,11 @@
 # Final-Project-ProgrammingForDigitalArts-ZhengJames
 The repository for my final project coded in Python.
 
-# PROJECT TITLE
-
 ## Demo
-Demo Video: <URL>
+Demo Video: <https://www.youtube.com/watch?v=GX-7mBQZVpc
 
 ## GitHub Repository
-GitHub Repo: <https://github.com/JimmyZheng70/Final-Project-ProgrammingForDigitalArts-ZhengJames>
+GitHub Repo: <https://github.com/JimmyZheng70/Final-Project-ProgrammingForDigitalArts-ZhengJames
 
 ## Description
 My final project is a Breakout like game in which the player has a paddle that can move left and right, boucning the ball to destroy the blocks, earning points. One major difference is the unique mechanic with color switching, which makes the ball switch to either blue or pink with each bounce, and the player must match the color by switching to the same color in order to not die. This game requires not only tracking, but also memory and reaction speed to be successful in the game.
