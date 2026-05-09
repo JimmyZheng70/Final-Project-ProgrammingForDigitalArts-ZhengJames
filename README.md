@@ -18,11 +18,11 @@ The Ball, which is coded inside its own class, moves by subtracting the position
 
 Blocks are created first with through having a nested loop, accounting for the rows and columns of the screen, and will draw out a rectangular shape in each columns, then moving onto rows, doing this 4 times in the columns, then 8 times for the rows. Each of these rectablges are stored inside of a list in order to make sure which to destroy if destroyed by the ball.
 
-Color switching, 
+Color switching was done through switching the 2 colors, red and blue for this game, and checking if the color matches with both the player and ball. If not, then leads to a game over. The way colors are switched is to whenever say a Ball hits a wall or a block, then call a method to change the color and update it as well. The player does the same, but with the input of the player instead of collision.
 
 Pause originally was going to stop in each of the classes, but decided to use boolean True/False for the player input and grabbing the pause methods from the Ball's Movement.
 
-Reset Game
+Once the player gets a game over, has the option to reset the game through pressing the R Key. When restarting, resets the level, scores, blocks, and positions of the ball/player to the beginning and start again. Created multiplate pause methods classes. Same concept with the next level system, but only resetting the blocks and objects rather than the score system.
 
 To use sound effects, I created a Sound Class, which would access a folder path with all the files name, and play the sound of the file I choose when called, esssentially reusing the sound class to play different types of sound without having to create multiple variables to hold each sound file. I used the pygame.mixer to play the sfx for the game itself. The sfx comes from Chip Tone, which I have used for other projects for making sound effects.
 
