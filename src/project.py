@@ -134,6 +134,7 @@ class Ball():
             
             self.color_switch() # Siwtches color of ball when bounced
 
+            ## Fix the Collision of this to make it better feeling
             # Enables the ball to feel more different depending on the movement of the pk]layer when colliding.
             if abs(self.ball.bottom - self.player.shape.top) < collision_thresh and self.speed_y < 0:
                 self.speed_y *= -1
